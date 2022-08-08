@@ -1,0 +1,10 @@
+﻿SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BLOCKED_WAREHOUSE](
+	[strAccountID] [char](21) NOT NULL,
+	[nMoney] [int] NOT NULL,
+	[WarehouseData] [varchar](1600) NULL
+) ON [PRIMARY]
+GO

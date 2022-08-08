@@ -1,0 +1,9 @@
+﻿SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[BATTLE](
+	[sIndex] [int] NOT NULL,
+	[byNation] [tinyint] NOT NULL
+) ON [PRIMARY]
+GO

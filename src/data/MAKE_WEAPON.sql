@@ -1,0 +1,1 @@
+﻿INSERT [dbo].[MAKE_WEAPON] ([sIndex], [strItemInfo], [iItemCode], [byLevel], [sClass_1], [sClass_2], [sClass_3], [sClass_4], [sClass_5], [sClass_6], [sClass_7], [sClass_8], [sClass_9], [sClass_10], [sClass_11], [sClass_12]) VALUES (1, N'1                   ', 110050000, 1, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)

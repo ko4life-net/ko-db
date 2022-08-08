@@ -1,0 +1,9 @@
+﻿SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[KNIGHTS_USER](
+	[sIDNum] [smallint] NOT NULL,
+	[strUserID] [char](21) NULL
+) ON [PRIMARY]
+GO

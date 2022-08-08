@@ -1,0 +1,2 @@
+﻿INSERT [dbo].[MAKE_ITEM_GRADECODE] ([byItemIndex], [byGrade_1], [byGrade_2], [byGrade_3], [byGrade_4], [byGrade_5], [byGrade_6], [byGrade_7], [byGrade_8], [byGrade_9]) VALUES (1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+INSERT [dbo].[MAKE_ITEM_GRADECODE] ([byItemIndex], [byGrade_1], [byGrade_2], [byGrade_3], [byGrade_4], [byGrade_5], [byGrade_6], [byGrade_7], [byGrade_8], [byGrade_9]) VALUES (2, 1, 1, 1, 1, 1, 1, 1, 1, 1)
