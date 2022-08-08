@@ -1,0 +1,5 @@
+﻿INSERT [dbo].[ZONE_INFO] ([ServerNo], [ZoneNo], [strZoneName], [InitX], [InitZ], [InitY], [Type], [RoomEvent]) VALUES (1, 2, N'elmorad_1212.smd              ', 163700, 41800, 38500, 1, 0)
+INSERT [dbo].[ZONE_INFO] ([ServerNo], [ZoneNo], [strZoneName], [InitX], [InitZ], [InitY], [Type], [RoomEvent]) VALUES (1, 1, N'karus_1212.smd                ', 37120, 157300, 38500, 1, 0)
+INSERT [dbo].[ZONE_INFO] ([ServerNo], [ZoneNo], [strZoneName], [InitX], [InitZ], [InitY], [Type], [RoomEvent]) VALUES (1, 101, N'battle_0810.smd               ', 23700, 14000, 38500, 3, 0)
+INSERT [dbo].[ZONE_INFO] ([ServerNo], [ZoneNo], [strZoneName], [InitX], [InitZ], [InitY], [Type], [RoomEvent]) VALUES (1, 102, N'battle_0810.smd               ', 23700, 14000, 38500, 3, 0)
+INSERT [dbo].[ZONE_INFO] ([ServerNo], [ZoneNo], [strZoneName], [InitX], [InitZ], [InitY], [Type], [RoomEvent]) VALUES (1, 201, N'free_0810.smd                 ', 51000, 57000, 38500, 1, 0)
