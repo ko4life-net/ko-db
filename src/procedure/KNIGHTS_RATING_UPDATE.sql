@@ -25,4 +25,5 @@ CREATE  INDEX [IX_rating_name] ON [dbo].[rating_temp]([strName]) ON [PRIMARY]
 if exists (select * from sysobjects where id = object_id(N'[dbo].[KNIGHTS_RATING]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
 drop table [dbo].[KNIGHTS_RATING]
 EXEC sp_rename 'rating_temp','KNIGHTS_RATING'
+
 GO

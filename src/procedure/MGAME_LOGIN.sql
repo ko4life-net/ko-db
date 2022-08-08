@@ -47,4 +47,5 @@ BEGIN
 	SET @nRet = @Nation+1
 	RETURN
 END
+
 GO

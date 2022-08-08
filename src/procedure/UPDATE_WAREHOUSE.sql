@@ -16,4 +16,5 @@ Set
 	WarehouseData	= @strItem,
                 strSerial		=@strSerial
 WHERE	strAccountID	= @accountid
+
 GO

@@ -9,5 +9,5 @@ CREATE TABLE [dbo].[MAKE_ITEM](
 	[byItemLevel] [tinyint] NOT NULL
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[MAKE_ITEM] ADD  CONSTRAINT [DF_MAKE_ITEM_byItemLevel]  DEFAULT (0) FOR [byItemLevel]
+ALTER TABLE [dbo].[MAKE_ITEM] ADD  CONSTRAINT [DF_MAKE_ITEM_byItemLevel]  DEFAULT ((0)) FOR [byItemLevel]
 GO

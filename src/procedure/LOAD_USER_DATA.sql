@@ -20,4 +20,5 @@ SELECT Nation, Race, Class, HairColor, Rank, Title, [Level], [Exp], Loyalty, Fac
 FROM	USERDATA WHERE strUserId = @id
 
 RETURN 1
+
 GO

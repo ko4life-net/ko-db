@@ -19,4 +19,5 @@ BEGIN TRAN
 	VALUES ('97414061', @nMoney, @WarehouseData) 
 			
 COMMIT TRAN
+
 GO
