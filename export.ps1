@@ -1,7 +1,9 @@
 # Using this: https://github.com/microsoft/mssql-scripter
 # Install python and then: `pip install mssql-scripter`
 
-$server_name = "(localhost)"
+# change server_name if you installed your sql server as Named Instance.
+# If you installed on the Default Instance, then you can keep it as-is.
+$server_name = "localhost"
 $db_name = "kodb"
 
 mssql-scripter `
