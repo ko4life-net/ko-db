@@ -2,7 +2,9 @@
 # To install it, run powershell as admin and execute the following command: `Install-Module sqlserver`
 [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SMO')
 
-$server_name = "(localhost)"
+# change server_name if you installed your sql server as Named Instance.
+# If you installed on the Default Instance, then you can keep it as-is.
+$server_name = "localhost"
 $db_name = "kodb"
 
 $server = New-Object Microsoft.SqlServer.Management.Smo.Server($server_name)
