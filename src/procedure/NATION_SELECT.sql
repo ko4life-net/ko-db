@@ -9,7 +9,14 @@ CREATE PROCEDURE [dbo].[NATION_SELECT]
 AS
 
 DECLARE @Row tinyint
-SET @Row = 0
+	SET @Row = 0
+
+	SELECT @Row = COUNT(*) FROM  ACCOUNT_CHAR  WHERE strAccountID = @AccountID
+	IF @Row > 0	
+	BEGIN
+		SET @nRet = -1
+		RETURN
+	END
 
 BEGIN TRAN	
 
