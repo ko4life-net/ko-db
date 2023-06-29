@@ -6,8 +6,8 @@ CREATE TABLE [dbo].[WAREHOUSE](
 	[strAccountID] [char](21) NOT NULL,
 	[nMoney] [int] NOT NULL,
 	[dwTime] [int] NOT NULL,
-	[WarehouseData] [char](1600) NULL,
-	[strSerial] [char](20) NULL,
+	[WarehouseData] [binary](400) NULL,
+	[strSerial] [binary](400) NULL,
  CONSTRAINT [PK_WAREHOUSE] PRIMARY KEY CLUSTERED 
 (
 	[strAccountID] ASC
