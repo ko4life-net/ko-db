@@ -34,7 +34,7 @@ CREATE TABLE [dbo].[USERDATA](
 	[PZ] [int] NOT NULL,
 	[PY] [int] NOT NULL,
 	[dwTime] [int] NOT NULL,
-	[strSkill] [varchar](10) NULL,
+	[strSkill] [binary](400) NULL,
 	[strItem] [binary](400) NULL,
 	[strSerial] [binary](400) NULL,
  CONSTRAINT [PK_USERDATA] PRIMARY KEY CLUSTERED 
@@ -105,6 +105,4 @@ GO
 ALTER TABLE [dbo].[USERDATA] ADD  CONSTRAINT [DF_USERDATA_PY]  DEFAULT ((0)) FOR [PY]
 GO
 ALTER TABLE [dbo].[USERDATA] ADD  CONSTRAINT [DF_USERDATA_dwTime]  DEFAULT ((0)) FOR [dwTime]
-GO
-ALTER TABLE [dbo].[USERDATA] ADD  CONSTRAINT [DF_USERDATA_strSkill]  DEFAULT (0x00) FOR [strSkill]
 GO
