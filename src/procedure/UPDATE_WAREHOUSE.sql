@@ -6,8 +6,8 @@ CREATE  PROCEDURE [dbo].[UPDATE_WAREHOUSE]
 	@accountid 		varchar(21),
 	@Money		int,
 	@dwTime		int,
-	@strItem		char(1600),
-	@strSerial               char(20)
+	@strItem		binary(1600),
+	@strSerial               binary(1600)
 AS
 UPDATE	WAREHOUSE
 Set
