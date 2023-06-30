@@ -34,7 +34,7 @@ CREATE  PROCEDURE [dbo].[UPDATE_USER_DATA]
 	@PZ		int,
 	@PY		int,
 	@dwTime	int,
-	@strSkill	varchar(20),
+	@strSkill	binary(400),
 	@strItem	binary(400),
              @strSerial          binary(400)
 AS
