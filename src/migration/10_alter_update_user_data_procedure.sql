@@ -34,9 +34,9 @@ ALTER  PROCEDURE [dbo].[UPDATE_USER_DATA]
 	@PZ			int,
 	@PY			int,
 	@dwTime		int,
-	@strSkill	varchar(20),
-	@strItem	varchar(400),
-	@strSerial	varchar(400)
+	@strSkill	binary(10),
+	@strItem	binary(400),
+	@strSerial	binary(400)
 AS
 
 DECLARE @KnightsIndex smallint
