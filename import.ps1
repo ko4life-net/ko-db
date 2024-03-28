@@ -29,7 +29,7 @@ if ($server.Databases[$db_name]) {
 }
 
 foreach ($dir In $("schema", "procedure", "data", "migration")) {
-  $scripts = Get-ChildItem -Path src/$dir -Filter "*.sql"
+  $scripts = Get-ChildItem -Path src/$dir -Filter "*.sql" | Sort-Object { [regex]::Replace($_.Name, '\d+', { $args[0].Value.PadLeft(20) }) }
   Write-Host "`n`n### Running $($scripts.Count) $dir scripts... ###"
   foreach ($fn In $scripts) {
     Write-Host $fn.FullName
