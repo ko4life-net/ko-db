@@ -21,4 +21,5 @@ FROM	USERDATA WHERE strUserId = @id
 
 RETURN 1
 
+
 GO

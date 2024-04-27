@@ -88,4 +88,5 @@ Set
              strSerial              =@strSerial
 WHERE	strUserId	= @id
 
+
 GO
