@@ -14,6 +14,14 @@ param (
 )
 
 function Main {
+  # Check if mssql-scripter command is available
+  if (-not (Get-Command mssql-scripter -ErrorAction SilentlyContinue)) {
+    Write-Host "Error: 'mssql-scripter' command is not available."  -ForegroundColor Red
+    Write-Host "Please make sure you have Python installed and then run:"  -ForegroundColor Red
+    Write-Host "pip install mssql-scripter" -ForegroundColor Red
+    exit 1
+  }
+
   mssql-scripter `
     -S $server_name `
     -d $db_name `

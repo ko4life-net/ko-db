@@ -19,4 +19,5 @@ SELECT Race, Class, HairColor, [Level], Face, strItem FROM USERDATA WHERE strUse
 SET @nRet = 1
 RETURN
 
+
 GO

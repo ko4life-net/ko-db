@@ -52,4 +52,5 @@ UPDATE KNIGHTS SET Ranking=3 WHERE IDNum=@Knights_3
 UPDATE KNIGHTS SET Ranking=4 WHERE IDNum=@Knights_4
 UPDATE KNIGHTS SET Ranking=5 WHERE IDNum=@Knights_5
 
+
 GO

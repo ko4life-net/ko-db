@@ -123,6 +123,14 @@ function CreateDbCredentials {
 }
 
 function Main {
+  # Check if the sqlserver module is installed
+  if (-not (Get-Module -Name sqlserver -ListAvailable)) {
+    Write-Host "Error: The 'sqlserver' powershell module is not installed."
+    Write-Host "Please open PowerShell as Administrator and execute the following command to install it:"
+    Write-Host "Install-Module -Name sqlserver -Force"
+    exit 1
+  }
+
   $server = ConnectToSqlServer
   RecreateDb $server
   RunInitialDbScripts
