@@ -10,7 +10,10 @@ param (
     $server_name = "localhost",
 
     [string][Parameter(Mandatory = $false)]
-    $db_name = "kodb"
+    $db_name = "kodb",
+
+    [bool][Parameter(Mandatory = $false)]
+    $quiet = $false
 )
 
 . "$PSScriptRoot\logger.ps1"
@@ -68,4 +71,6 @@ function Main {
 }
 
 Main
-cmd /c 'pause'
+if (-not $quiet) {
+  cmd /c 'pause'
+}

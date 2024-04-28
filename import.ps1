@@ -20,7 +20,10 @@ param (
     # Set this flag to true if you're creating a db release or want to see the current diffs of each migration script
     # Warning: make sure to commit your changes before running the script with this enabled, or you may lose work
     [bool][Parameter(Mandatory = $false)]
-    $generate_diffs = $false
+    $generate_diffs = $false,
+
+    [bool][Parameter(Mandatory = $false)]
+    $quiet = $false
 )
 
 . "$PSScriptRoot\logger.ps1"
@@ -111,7 +114,7 @@ function RunMigrationScriptsAndGenerateDiffs {
   foreach ($script In $scripts) {
     Message $script.FullName
     InvokeSqlScript -script_path $script.FullName
-    .\export.ps1 -server_name $server_name -db_name $db_name
+    .\export.ps1 -server_name $server_name -db_name $db_name -quiet $true
     git add $targetDirs
     $diffOutputFile = $script.FullName + ".diff"
     # Note that powershell messes up with the output and corrupts the patch, hence we use cmd here.
@@ -158,4 +161,6 @@ function Main {
 }
 
 Main
-cmd /c 'pause'
+if (-not $quiet) {
+  cmd /c 'pause'
+}
