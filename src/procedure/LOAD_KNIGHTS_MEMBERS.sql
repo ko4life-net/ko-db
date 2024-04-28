@@ -16,4 +16,5 @@ SELECT strUserId, Fame, [Level], Class FROM USERDATA WHERE Knights = @knightsind
 --RETURN
 
 
+
 GO

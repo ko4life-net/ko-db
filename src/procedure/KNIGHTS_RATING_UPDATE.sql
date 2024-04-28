@@ -27,4 +27,5 @@ drop table [dbo].[KNIGHTS_RATING]
 EXEC sp_rename 'rating_temp','KNIGHTS_RATING'
 
 
+
 GO

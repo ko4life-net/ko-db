@@ -89,4 +89,5 @@ Set
 WHERE	strUserId	= @id
 
 
+
 GO
