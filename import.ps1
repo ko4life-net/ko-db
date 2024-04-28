@@ -104,7 +104,7 @@ function RunMigrationScriptsAndGenerateDiffs {
   $scripts = GetMigrationScripts
   MessageInfo "`n`n### Running $($scripts.Count) migration scripts and generate diffs... ###"
   $targetDirs = ".\src\schema\*", ".\src\data\*", ".\src\procedure\*"
-  $tempUniqueCommitMessage = "####" + (uuidgen.exe)
+  $tempUniqueCommitMessage = "####" + (New-Guid)
 
   git reset # unstage all changes
   git clean -f .\src\migration\*.diff # cleanup previous untracked diff files
