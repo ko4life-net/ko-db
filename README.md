@@ -9,6 +9,18 @@ Brief explanation of the directory structure under `src`:
 - procedure - Stored procedures based on the current db state
 - schema - Tables structure and constraints based on the current db state
 
+### Prerequisite
+
+- Any MSSQL Express Server (confirmed to be working with 2008 and 2022)
+  - Download the Express version from here: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+  - Download the latest MSSQL Management Studio: https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+    - Note that it can connect to any version of SQL Server, so even if you use 2008, just get the latest Management Studio for better development experience
+- Powershell `sqlserver` module
+  - Open Powershell as Admin and run the following command: `Install-Module -Name sqlserver -Force`
+    - Note that if you're getting errors during the installation, it is likely because because your SQL installation installed its own powershell module which conflicts with the one we intend to use. They're incompatible and behave differently when creating db exports, hence you need to delete it from your System Environment Variable `PSModulePath` and restart powershell to reload without these modules. Basically if you see in your `PSModulePath` environment variable something with `Microsoft SQL Server`, just remove it, since we want to use the module that we intend to use.
+- Python and installing via pip the mssql-scripts: `pip install mssql-scripter`
+
+
 ### Development
 
 Note that the development process is inspired from [different db development environments](https://docs.djangoproject.com/en/4.0/topics/migrations/), where a table is treated as a model.

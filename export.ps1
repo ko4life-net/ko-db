@@ -18,9 +18,9 @@ param (
 function Main {
   # Check if mssql-scripter command is available
   if (-not (Get-Command mssql-scripter -ErrorAction SilentlyContinue)) {
-    MessageError "Error: 'mssql-scripter' command is not available."  -ForegroundColor Red
-    MessageError "Please make sure you have Python installed and then run:"  -ForegroundColor Red
-    MessageError "pip install mssql-scripter" -ForegroundColor Red
+    MessageError "Error: 'mssql-scripter' command is not available."
+    MessageError "Please make sure you have Python installed and then run:"
+    MessageError "pip install mssql-scripter"
     exit 1
   }
 
