@@ -17,6 +17,8 @@ During development we only create migration scripts to alter the current state o
 
 Every migration script will be prefixed by index. For example, `1_insert_steve_user.sql` will contain an insert statement to `TB_USER` table.
 
+Apart from the benifit of having the database under version control, this also makes it easy to use any SQL version you want. I use both 2008 and 2022 and it works perfectly fine with both.
+
 Release process should follow for every release we create in the [main ko project](https://github.com/ko4life-net/ko). The steps should look like this:
 - Main ko project needs a new release
   - Are there any pending migration scrips in the ko-db project?
