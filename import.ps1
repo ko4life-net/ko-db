@@ -111,7 +111,7 @@ function RunMigrationScriptsAndGenerateDiffs {
   foreach ($script In $scripts) {
     Message $script.FullName
     InvokeSqlScript -script_path $script.FullName
-    .\export.ps1
+    .\export.ps1 -server_name $server_name -db_name $db_name
     git add $targetDirs
     $diffOutputFile = $script.FullName + ".diff"
     # Note that powershell messes up with the output and corrupts the patch, hence we use cmd here.
