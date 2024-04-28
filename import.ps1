@@ -1,6 +1,9 @@
 # If you invoke the script from the terminal, you can specify the server and db name in case you changed it.
 # Otherwise just stick to the default values. example:
 # .\import.ps1 -db_name "mydb"
+# Additionally in case of issues, you can run the following command as admin to restart the SQL services:
+# Get-Service -DisplayName 'SQL Server (*' | ForEach-Object { echo "Restarting $($_.DisplayName)..."; Restart-Service $_.DisplayName }
+
 param (
     # change server_name if you installed your sql server as a Named Instance.
     # If you installed on the Default Instance, then you can leave this as-is.
@@ -20,6 +23,8 @@ param (
     $generate_diffs = $false
 )
 
+. "$PSScriptRoot\logger.ps1"
+
 # Note that the script will fail if you don't have powershell sqlserver module installed.
 # To install it, run powershell as admin and execute the following command: `Install-Module sqlserver`
 function ConnectToSqlServer {
@@ -37,43 +42,47 @@ function ConnectToSqlServer {
   return $server
 }
 
+# Always mention in your queries which DB you use when invoking this function (example: "USE master; my query...")
+function InvokeSqlQuery {
+  param ([string][Parameter(Mandatory)] $query)
+  Message "Query: [$query]"
+  $connection_string = "Server=$server_name;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;"
+  return Invoke-Sqlcmd -ConnectionString $connection_string -Query "$query"
+}
+
+# Normally your scripts will anyway mention which db they use, hence the target_db argument is optional
+function InvokeSqlScript {
+  param ([string][Parameter(Mandatory)] $script_path, [string][Parameter(Mandatory=$false)] $target_db = $db_name)
+  $connection_string = "Server=$server_name;Database=$target_db;Integrated Security=True;Encrypt=False;TrustServerCertificate=True;"
+  return Invoke-Sqlcmd -ConnectionString $connection_string -InputFile "$script_path"
+}
+
 function RecreateDb {
-  param ([Microsoft.SqlServer.Management.Smo.Server][Parameter(Mandatory)] $server)
+  param ([Microsoft.SqlServer.Management.Smo.Server][Parameter(Mandatory)] $server_instance)
 
-  if ($server.Databases[$db_name]) {
-    Write-Host 'Database already exists. Will drop and recreate it.'
-
+  if ($server_instance.Databases[$db_name]) {
     # Create a local backup of the db prefixed with a timestamp, just in case the user forgot to save their work.
+    MessageInfo 'Database already exists. Creating backup before recreating it...'
     $bak_file = $PSScriptRoot + "\" + (Get-Date -Format "yyyyMMddTHHmmss") + "_" + $db_name + ".bak"
-    Write-Host "Dumping database snapshot to [$bak_file]"
-    $backup_device = New-Object Microsoft.SqlServer.Management.Smo.BackupDeviceItem($bak_file, "File")
-    $backup = New-Object Microsoft.SqlServer.Management.Smo.Backup
-    $backup.Action = [Microsoft.SqlServer.Management.Smo.BackupActionType]::Database
-    $backup.Database = $db_name
-    $backup.Devices.Add($backup_device)
-    $backup.SqlBackup($server)
+    Message "Dumping database snapshot to [$bak_file]"
+    InvokeSqlScript -script_path "src/misc/backup_db.sql" -target_db "master"
+    InvokeSqlQuery -query "USE master; EXEC N3BackupDatabase @DatabaseName = '$db_name', @BackupFilePath = '$bak_file';"
 
-    # Drop existing database
-    Invoke-SqlCmd -ServerInstance $server_name -Query `
-      " `
-        BEGIN `
-          ALTER DATABASE [$db_name] SET SINGLE_USER WITH ROLLBACK IMMEDIATE; `
-          DROP DATABASE [$db_name]; `
-        END; `
-      "
+    # Drop the existing database
+    InvokeSqlQuery -query "USE master; ALTER DATABASE [$db_name] SET SINGLE_USER WITH ROLLBACK IMMEDIATE; DROP DATABASE [$db_name];"
   }
 
-  Write-Host "Creating database $db_name..."
-  Invoke-SqlCmd -ServerInstance $server_name -Query "CREATE DATABASE [$db_name];" -Verbose
+  MessageInfo "Creating database $db_name..."
+  InvokeSqlQuery -query "USE master; CREATE DATABASE [$db_name];"
 }
 
 function RunInitialDbScripts {
   foreach ($dir In $("schema", "procedure", "data")) {
     $scripts = Get-ChildItem "src/$dir" -Filter "*.sql"
-    Write-Host "`n`n### Running $($scripts.Count) $dir scripts... ###"
+    MessageInfo "`n`n### Running $($scripts.Count) $dir scripts... ###"
     foreach ($fn In $scripts) {
-      Write-Host $fn.FullName
-      Invoke-Sqlcmd -ServerInstance $server_name -Database $db_name -InputFile $fn.FullName
+      Message $fn.FullName
+      InvokeSqlScript -script_path $fn.FullName
     }
   }
 }
@@ -84,24 +93,24 @@ function GetMigrationScripts {
 
 function RunMigrationScripts {
   $scripts = GetMigrationScripts
-  Write-Host "`n`n### Running $($scripts.Count) migration scripts... ###"
+  MessageInfo "`n`n### Running $($scripts.Count) migration scripts... ###"
   foreach ($script In $scripts) {
-    Write-Host $script.FullName
-    Invoke-Sqlcmd -ServerInstance $server_name -Database $db_name -InputFile $script.FullName
+    Message $script.FullName
+    InvokeSqlScript -script_path $script.FullName
   }
 }
 
 function RunMigrationScriptsAndGenerateDiffs {
   $scripts = GetMigrationScripts
-  Write-Host "`n`n### Running $($scripts.Count) migration scripts and generate diffs... ###"
+  MessageInfo "`n`n### Running $($scripts.Count) migration scripts and generate diffs... ###"
   $targetDirs = ".\src\schema\*", ".\src\data\*", ".\src\procedure\*"
   $tempUniqueCommitMessage = "####" + (uuidgen.exe)
 
   git reset # unstage all changes
   git clean -f .\src\migration\*.diff # cleanup previous untracked diff files
   foreach ($script In $scripts) {
-    Write-Host $script.FullName
-    Invoke-Sqlcmd -ServerInstance $server_name -Database $db_name -InputFile $script.FullName
+    Message $script.FullName
+    InvokeSqlScript -script_path $script.FullName
     .\export.ps1
     git add $targetDirs
     $diffOutputFile = $script.FullName + ".diff"
@@ -117,22 +126,22 @@ function RunMigrationScriptsAndGenerateDiffs {
 }
 
 function CreateDbCredentials {
-  Write-Host "`n`n### Creating login and user for $db_name... ###"
-  Write-Host "src/misc/create_login.sql"
-  Invoke-Sqlcmd -ServerInstance $server_name -Database $db_name -InputFile "src/misc/create_login.sql"
+  MessageInfo "`n`n### Creating login and user for $db_name... ###"
+  Message "src/misc/create_login.sql"
+  InvokeSqlScript -script_path "src/misc/create_login.sql"
 }
 
 function Main {
   # Check if the sqlserver module is installed
   if (-not (Get-Module -Name sqlserver -ListAvailable)) {
-    Write-Host "Error: The 'sqlserver' powershell module is not installed."
-    Write-Host "Please open PowerShell as Administrator and execute the following command to install it:"
-    Write-Host "Install-Module -Name sqlserver -Force"
+    MessageError "Error: The 'sqlserver' powershell module is not installed."
+    MessageError "Please open PowerShell as Administrator and execute the following command to install it:"
+    MessageError "Install-Module -Name sqlserver -Force"
     exit 1
   }
 
   $server = ConnectToSqlServer
-  RecreateDb $server
+  RecreateDb -server_instance $server
   RunInitialDbScripts
 
   if ($run_migration_scripts) {
@@ -142,7 +151,7 @@ function Main {
       RunMigrationScripts
     }
   } else {
-    Write-Host "Skipping migration scripts..."
+    MessageInfo "Skipping migration scripts..."
   }
 
   CreateDbCredentials

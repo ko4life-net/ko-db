@@ -13,12 +13,14 @@ param (
     $db_name = "kodb"
 )
 
+. "$PSScriptRoot\logger.ps1"
+
 function Main {
   # Check if mssql-scripter command is available
   if (-not (Get-Command mssql-scripter -ErrorAction SilentlyContinue)) {
-    Write-Host "Error: 'mssql-scripter' command is not available."  -ForegroundColor Red
-    Write-Host "Please make sure you have Python installed and then run:"  -ForegroundColor Red
-    Write-Host "pip install mssql-scripter" -ForegroundColor Red
+    MessageError "Error: 'mssql-scripter' command is not available."  -ForegroundColor Red
+    MessageError "Please make sure you have Python installed and then run:"  -ForegroundColor Red
+    MessageError "pip install mssql-scripter" -ForegroundColor Red
     exit 1
   }
 
@@ -61,6 +63,8 @@ function Main {
   }
 
   Remove-Item tmp -Recurse
+
+  MessageSuccess "Successfully exported [$db_name] database from [$server_name] SQL server."
 }
 
 Main
