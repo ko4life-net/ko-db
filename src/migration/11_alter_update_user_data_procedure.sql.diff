@@ -1,0 +1,30 @@
+diff --git a/src/procedure/UPDATE_USER_DATA.sql b/src/procedure/UPDATE_USER_DATA.sql
+index dcb8da3..5279adf 100644
+--- a/src/procedure/UPDATE_USER_DATA.sql
++++ b/src/procedure/UPDATE_USER_DATA.sql
+@@ -34,9 +34,9 @@ CREATE PROCEDURE [dbo].[UPDATE_USER_DATA]
+   @PZ int,
+   @PY int,
+   @dwTime int,
+-  @strSkill varchar(20),
+-  @strItem binary(400),
+-  @strSerial binary(400)
++  @bySkill binary(10),
++  @byItem binary(400),
++  @bySerial binary(400)
+ AS
+ 
+ DECLARE @KnightsIndex smallint
+@@ -83,9 +83,9 @@ SET
+   PZ = @PZ,
+   PY = @PY,
+   dwTime = @dwTime,
+-  strSkill = @strSkill,
+-  strItem = @strItem,
+-  strSerial = @strSerial
++  bySkill = @bySkill,
++  byItem = @byItem,
++  bySerial = @bySerial
+ WHERE strUserId = @id
+ 
+ GO

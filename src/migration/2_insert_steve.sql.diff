@@ -1,0 +1,8 @@
+diff --git a/src/data/TB_USER.sql b/src/data/TB_USER.sql
+index 5f28270..c8ea76f 100644
+--- a/src/data/TB_USER.sql
++++ b/src/data/TB_USER.sql
+@@ -1 +1 @@
+-﻿
+\ No newline at end of file
++﻿INSERT [dbo].[TB_USER] ([strAccountID], [strPasswd], [strSocNo]) VALUES (N'steve', N'1', N'1              ')

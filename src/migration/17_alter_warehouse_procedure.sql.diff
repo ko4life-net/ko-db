@@ -1,0 +1,24 @@
+diff --git a/src/procedure/UPDATE_WAREHOUSE.sql b/src/procedure/UPDATE_WAREHOUSE.sql
+index a51c200..2a72ba2 100644
+--- a/src/procedure/UPDATE_WAREHOUSE.sql
++++ b/src/procedure/UPDATE_WAREHOUSE.sql
+@@ -6,15 +6,15 @@ CREATE PROCEDURE [dbo].[UPDATE_WAREHOUSE]
+   @accountid varchar(21),
+   @Money int,
+   @dwTime int,
+-  @strItem char(1600),
+-  @strSerial char(20)
++  @byItem binary(1600),
++  @bySerial binary(1600)
+ AS
+ UPDATE WAREHOUSE
+ SET
+   nMoney = @Money,
+   dwTime = @dwTime,
+-  WarehouseData = @strItem,
+-  strSerial = @strSerial
++  byItem = @byItem,
++  bySerial = @bySerial
+ WHERE strAccountID = @accountid
+ 
+ GO
