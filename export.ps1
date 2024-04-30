@@ -10,10 +10,29 @@ param (
     $server_name = "localhost",
 
     [string][Parameter(Mandatory = $false)]
-    $db_name = "kodb"
+    $db_name = "kodb",
+
+    [bool][Parameter(Mandatory = $false)]
+    $quiet = $false
 )
 
 . "$PSScriptRoot\logger.ps1"
+
+
+function GetFileEncoding($Path) {
+    $bytes = [byte[]](Get-Content $Path -Encoding byte -ReadCount 4 -TotalCount 4)
+
+    if(!$bytes) { return 'utf8' }
+
+    switch -regex ('{0:x2}{1:x2}{2:x2}{3:x2}' -f $bytes[0],$bytes[1],$bytes[2],$bytes[3]) {
+        '^efbbbf'   { return 'utf8' }
+        '^2b2f76'   { return 'utf7' }
+        '^fffe'     { return 'unicode' }
+        '^feff'     { return 'bigendianunicode' }
+        '^0000feff' { return 'utf32' }
+        default     { return 'ascii' }
+    }
+}
 
 function Main {
   # Check if mssql-scripter command is available
@@ -58,6 +77,14 @@ function Main {
   }
 
   foreach ($fn In Get-ChildItem -Path "tmp/schema" -Filter "*.StoredProcedure.sql") {
+    # TODO: Delete this nasty workaround once sqlfluff implements this: https://github.com/sqlfluff/sqlfluff/issues/5829
+    # mssql-scripter or more specifically the sqltoolsservice it uses in the background, generates randomly / sometimes
+    # white spaces in the last GO statement of the file. It behaves inconsistenly and hard to reproduce, but when it happens
+    # it is annoying as hell since it bloats the diff for no good reason.
+    $encoding = GetFileEncoding $fn.FullName
+    $content = Get-Content $fn.FullName -Raw
+    Set-Content $fn.FullName ($content -replace "\s*[\n\s]GO[\n\s]*$", "`n`nGO") -Encoding $encoding
+
     $name = $fn.Name.Split(".")[1]
     Move-Item -Path $fn.FullName -Destination "src/procedure/$name.sql" -Force
   }
@@ -68,4 +95,6 @@ function Main {
 }
 
 Main
-cmd /c 'pause'
+if (-not $quiet) {
+  cmd /c 'pause'
+}

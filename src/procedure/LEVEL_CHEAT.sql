@@ -104,6 +104,4 @@ END
 CLOSE Backup_Compare_Cursor
 DEALLOCATE Backup_Compare_Cursor
 
-
-
 GO

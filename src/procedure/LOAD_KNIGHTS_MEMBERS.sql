@@ -15,6 +15,4 @@ SELECT strUserId, Fame, [Level], Class FROM USERDATA WHERE Knights = @knightsind
 --SET @nRet = 1
 --RETURN
 
-
-
 GO
