@@ -20,8 +20,8 @@ CREATE TABLE [dbo].[K_NPC](
 	[sLevel] [int] NOT NULL,
 	[iExp] [int] NOT NULL,
 	[iLoyalty] [int] NOT NULL,
-	[sHpPoint] [int] NOT NULL,
-	[sMpPoint] [int] NOT NULL,
+	[iHpPoint] [int] NOT NULL,
+	[sMpPoint] [smallint] NOT NULL,
 	[sAtk] [int] NOT NULL,
 	[sAc] [int] NOT NULL,
 	[sHitRate] [int] NOT NULL,
@@ -34,13 +34,13 @@ CREATE TABLE [dbo].[K_NPC](
 	[iMagic1] [int] NOT NULL,
 	[iMagic2] [int] NOT NULL,
 	[iMagic3] [int] NOT NULL,
-	[byFireR] [int] NOT NULL,
-	[byColdR] [int] NOT NULL,
-	[byLightningR] [int] NOT NULL,
-	[byMagicR] [int] NOT NULL,
-	[byDiseaseR] [int] NOT NULL,
-	[byPoisonR] [int] NOT NULL,
-	[byLightR] [int] NOT NULL,
+	[sFireR] [smallint] NOT NULL,
+	[sColdR] [smallint] NOT NULL,
+	[sLightningR] [smallint] NOT NULL,
+	[sMagicR] [smallint] NOT NULL,
+	[sDiseaseR] [smallint] NOT NULL,
+	[sPoisonR] [smallint] NOT NULL,
+	[sLightR] [smallint] NOT NULL,
 	[sBulk] [int] NOT NULL,
 	[byAttackRange] [int] NOT NULL,
 	[bySearchRange] [int] NOT NULL,
@@ -73,7 +73,7 @@ ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_iExp]  DEFAULT ((0)) FO
 GO
 ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_iLoyalty]  DEFAULT ((0)) FOR [iLoyalty]
 GO
-ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sHpPoint]  DEFAULT ((0)) FOR [sHpPoint]
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_iHpPoint]  DEFAULT ((0)) FOR [iHpPoint]
 GO
 ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sMpPoint]  DEFAULT ((0)) FOR [sMpPoint]
 GO
@@ -99,17 +99,19 @@ ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sMagic2]  DEFAULT ((0))
 GO
 ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sMagic3]  DEFAULT ((0)) FOR [iMagic3]
 GO
-ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_byFireR]  DEFAULT ((0)) FOR [byFireR]
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sFireR]  DEFAULT ((0)) FOR [sFireR]
 GO
-ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_byColdR]  DEFAULT ((0)) FOR [byColdR]
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sColdR]  DEFAULT ((0)) FOR [sColdR]
 GO
-ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_byLightR]  DEFAULT ((0)) FOR [byLightningR]
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sLightningR]  DEFAULT ((0)) FOR [sLightningR]
 GO
-ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_byMagicR]  DEFAULT ((0)) FOR [byMagicR]
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sMagicR]  DEFAULT ((0)) FOR [sMagicR]
 GO
-ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_byDiseaseR]  DEFAULT ((0)) FOR [byDiseaseR]
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sDiseaseR]  DEFAULT ((0)) FOR [sDiseaseR]
 GO
-ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_byPoisonR]  DEFAULT ((0)) FOR [byPoisonR]
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sPoisonR]  DEFAULT ((0)) FOR [sPoisonR]
+GO
+ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_sLightR]  DEFAULT ((0)) FOR [sLightR]
 GO
 ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_K_NPC_sBulk]  DEFAULT ((0)) FOR [sBulk]
 GO

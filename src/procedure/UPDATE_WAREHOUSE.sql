@@ -6,15 +6,15 @@ CREATE PROCEDURE [dbo].[UPDATE_WAREHOUSE]
   @accountid varchar(21),
   @Money int,
   @dwTime int,
-  @strItem char(1600),
-  @strSerial char(20)
+  @byItem binary(1600),
+  @bySerial binary(1600)
 AS
 UPDATE WAREHOUSE
 SET
   nMoney = @Money,
   dwTime = @dwTime,
-  WarehouseData = @strItem,
-  strSerial = @strSerial
+  byItem = @byItem,
+  bySerial = @bySerial
 WHERE strAccountID = @accountid
 
 GO
