@@ -23,7 +23,7 @@ jobs:
 
       - name: Check lint
         run: |
-          & .\format.ps1
+          & .\format.ps1 -verbose_output $true
           $git_diff = (git diff --stat -- "*.sql")
           if ($git_diff -ne $null) {
               Write-Host "Code formatting issues found! Please run the format.ps1 script, commit the changes and push."
