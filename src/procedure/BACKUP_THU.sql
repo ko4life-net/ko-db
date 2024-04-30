@@ -76,7 +76,4 @@ END
 CLOSE Backup_Item_Cursor
 DEALLOCATE Backup_Item_Cursor
 
-
-
-
 GO

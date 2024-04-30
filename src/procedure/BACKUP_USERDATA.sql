@@ -30,6 +30,4 @@ BEGIN TRAN
 	
 COMMIT TRAN
 
-
-
 GO

@@ -10,6 +10,4 @@ SELECT strCharID1, strCharID2, strCharID3, strCharID4, strCharID5  FROM ACCOUNT_
 
 RETURN @@ROWCOUNT
 
-
-
 GO

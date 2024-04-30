@@ -26,6 +26,4 @@ if exists (select * from sysobjects where id = object_id(N'[dbo].[KNIGHTS_RATING
 drop table [dbo].[KNIGHTS_RATING]
 EXEC sp_rename 'rating_temp','KNIGHTS_RATING'
 
-
-
 GO
