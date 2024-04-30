@@ -3,5 +3,4 @@
 sqlfluff format `
   "$PSScriptRoot\src\migration\" `
   "$PSScriptRoot\src\misc\" `
-  "$PSScriptRoot\src\procedure\" `
-  "$PSScriptRoot\src\schema\"
+  "$PSScriptRoot\src\procedure\"

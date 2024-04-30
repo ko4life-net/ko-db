@@ -18,7 +18,9 @@ Brief explanation of the directory structure under `src`:
 - Powershell `sqlserver` module
   - Open Powershell as Admin and run the following command: `Install-Module -Name sqlserver -Force`
     - Note that if you're getting errors during the installation, it is likely because because your SQL installation installed its own powershell module which conflicts with the one we intend to use. They're incompatible and behave differently when creating db exports, hence you need to delete it from your System Environment Variable `PSModulePath` and restart powershell to reload without these modules. Basically if you see in your `PSModulePath` environment variable something with `Microsoft SQL Server`, just remove it, since we want to use the module that we intend to use.
-- Python and installing via pip the mssql-scripts: `pip install mssql-scripter`
+- Python and installing via pip the following packages (if you get errors, run powershell as admin):
+  - T-SQL code formatter: `pip install sqlfluff`
+  - MSSQL scripter: `pip install mssql-scripter`
 
 
 ### Development
