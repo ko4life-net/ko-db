@@ -12,6 +12,10 @@ param (
     [string][Parameter(Mandatory = $false)]
     $db_name = "kodb",
 
+
+    [bool][Parameter(Mandatory = $false)]
+    $apply_format = $true,
+
     [bool][Parameter(Mandatory = $false)]
     $quiet = $false
 )
@@ -20,18 +24,18 @@ param (
 
 
 function GetFileEncoding($Path) {
-    $bytes = [byte[]](Get-Content $Path -Encoding byte -ReadCount 4 -TotalCount 4)
+  $bytes = [byte[]](Get-Content $Path -Encoding byte -ReadCount 4 -TotalCount 4)
 
-    if(!$bytes) { return 'utf8' }
+  if(!$bytes) { return 'utf8' }
 
-    switch -regex ('{0:x2}{1:x2}{2:x2}{3:x2}' -f $bytes[0],$bytes[1],$bytes[2],$bytes[3]) {
-        '^efbbbf'   { return 'utf8' }
-        '^2b2f76'   { return 'utf7' }
-        '^fffe'     { return 'unicode' }
-        '^feff'     { return 'bigendianunicode' }
-        '^0000feff' { return 'utf32' }
-        default     { return 'ascii' }
-    }
+  switch -regex ('{0:x2}{1:x2}{2:x2}{3:x2}' -f $bytes[0],$bytes[1],$bytes[2],$bytes[3]) {
+    '^efbbbf'   { return 'utf8' }
+    '^2b2f76'   { return 'utf7' }
+    '^fffe'     { return 'unicode' }
+    '^feff'     { return 'bigendianunicode' }
+    '^0000feff' { return 'utf32' }
+    default     { return 'ascii' }
+  }
 }
 
 function Main {
@@ -90,6 +94,15 @@ function Main {
   }
 
   Remove-Item tmp -Recurse
+
+  if ($apply_format) {
+    # Note that we intentionally don't format schema and data, because they're not written
+    # by the user and also because it takes a while to format big data.
+    sqlfluff format `
+      "$PSScriptRoot\src\migration\" `
+      "$PSScriptRoot\src\misc\" `
+      "$PSScriptRoot\src\procedure\"
+  }
 
   MessageSuccess "Successfully exported [$db_name] database from [$server_name] SQL server."
 }

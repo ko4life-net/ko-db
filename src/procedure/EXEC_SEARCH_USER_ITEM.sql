@@ -12,26 +12,31 @@ DECLARE @strUserID char(21)
 DECLARE @strItem binary(400)
 DECLARE job1 CURSOR FOR
 
-SELECT strUserID, strItem FROM USERDATA
+SELECT
+  strUserID,
+  strItem
+FROM USERDATA
 
 OPEN job1
 FETCH NEXT FROM job1
 INTO @strUserID, @strItem
-WHILE @@fetch_status = 0 
-BEGIN
-	DECLARE @strAccountID char(21)
-	DECLARE @strWareHouse char(1600)
+WHILE @@fetch_status = 0
+  BEGIN
+    DECLARE @strAccountID char(21)
+    DECLARE @strWareHouse char(1600)
 
-	SELECT @strAccountID=strAccountID FROM ACCOUNT_CHAR WHERE @struserid=strCharID1 or @struserid=strCharID2 or @struserid=strCharID3
-	SELECT @strWareHouse=WarehouseData FROM WAREHOUSE WHERE strAccountID=@strAccountID
+    SELECT @strAccountID = strAccountID
+    FROM ACCOUNT_CHAR
+    WHERE @struserid = strCharID1 OR @struserid = strCharID2 OR @struserid = strCharID3
+    SELECT @strWareHouse = WarehouseData FROM WAREHOUSE WHERE strAccountID = @strAccountID
 
-	INSERT INTO SEARCH_USERDATA (strUserId, strAccountID, strItem, strWarehouseData ) 
-	VALUES	 (@strUserID, @strAccountID, @strItem, @strWareHouse )
+    INSERT INTO SEARCH_USERDATA (strUserId, strAccountID, strItem, strWarehouseData)
+    VALUES (@strUserID, @strAccountID, @strItem, @strWareHouse)
 
-	
-	FETCH NEXT FROM job1
-	INTO @strUserID, @strItem
-END
+
+    FETCH NEXT FROM job1
+    INTO @strUserID, @strItem
+  END
 CLOSE job1
 DEALLOCATE job1
 SET NOCOUNT OFF

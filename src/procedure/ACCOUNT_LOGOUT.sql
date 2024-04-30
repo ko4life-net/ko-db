@@ -3,15 +3,15 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[ACCOUNT_LOGOUT]
-@AccountID	varchar(21),
-@nRet		smallint	OUTPUT
+  @AccountID varchar(21),
+  @nRet smallint OUTPUT
 
 AS
 
 BEGIN TRAN
 
-	DELETE FROM CURRENTUSER WHERE strAccountID = @AccountID
-	
+DELETE FROM CURRENTUSER WHERE strAccountID = @AccountID
+
 COMMIT TRAN
 SET @nRet = 1
 

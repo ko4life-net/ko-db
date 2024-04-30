@@ -1,0 +1,2 @@
+sqlfluff==2.3.5
+mssql-scripter==1.0.0a23

@@ -1,0 +1,1 @@
+DO NOT CREATE ISSUES HERE, RATHER DO THAT IN THE MAIN PROJECT: https://github.com/ko4life-net/ko
