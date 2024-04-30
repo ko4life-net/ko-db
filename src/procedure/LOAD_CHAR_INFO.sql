@@ -20,7 +20,8 @@ IF @nRet = 0
     HairColor,
     [Level],
     Face,
-    strItem
+    Zone,
+    byItem
   FROM USERDATA WHERE strUserID = @CharId
 
 SET @nRet = 1

@@ -32,10 +32,12 @@ CREATE TABLE [dbo].[DELETED_USERDATA](
 	[Zone] [tinyint] NOT NULL,
 	[Bind] [smallint] NULL,
 	[PX] [int] NOT NULL,
-	[PZ] [int] NULL,
-	[PY] [int] NULL,
-	[strSkill] [varchar](10) NULL,
-	[strItem] [binary](400) NULL,
+	[PZ] [int] NOT NULL,
+	[PY] [int] NOT NULL,
+	[dwTime] [int] NOT NULL,
+	[bySkill] [binary](10) NULL,
+	[byItem] [binary](400) NULL,
+	[bySerial] [binary](400) NULL,
 	[DeletedTime] [smalldatetime] NOT NULL
 ) ON [PRIMARY]
 GO

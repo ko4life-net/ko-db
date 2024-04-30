@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[K_MONSTER](
 	[sLevel] [smallint] NOT NULL,
 	[iExp] [int] NOT NULL,
 	[iLoyalty] [int] NOT NULL,
-	[sHpPoint] [smallint] NOT NULL,
+	[iHpPoint] [int] NOT NULL,
 	[sMpPoint] [smallint] NOT NULL,
 	[sAtk] [smallint] NOT NULL,
 	[sAc] [smallint] NOT NULL,
@@ -33,13 +33,13 @@ CREATE TABLE [dbo].[K_MONSTER](
 	[iMagic1] [int] NOT NULL,
 	[iMagic2] [int] NOT NULL,
 	[iMagic3] [int] NOT NULL,
-	[byFireR] [tinyint] NOT NULL,
-	[byColdR] [tinyint] NOT NULL,
-	[byLightningR] [tinyint] NOT NULL,
-	[byMagicR] [tinyint] NOT NULL,
-	[byDiseaseR] [tinyint] NOT NULL,
-	[byPoisonR] [tinyint] NOT NULL,
-	[byLightR] [tinyint] NOT NULL,
+	[sFireR] [smallint] NOT NULL,
+	[sColdR] [smallint] NOT NULL,
+	[sLightningR] [smallint] NOT NULL,
+	[sMagicR] [smallint] NOT NULL,
+	[sDiseaseR] [smallint] NOT NULL,
+	[sPoisonR] [smallint] NOT NULL,
+	[sLightR] [smallint] NOT NULL,
 	[sBulk] [smallint] NOT NULL,
 	[byAttackRange] [tinyint] NOT NULL,
 	[bySearchRange] [tinyint] NOT NULL,
@@ -70,7 +70,7 @@ ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sLevel]  DEFAULT ((1
 GO
 ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_iExp]  DEFAULT ((0)) FOR [iExp]
 GO
-ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sHpPoint]  DEFAULT ((0)) FOR [sHpPoint]
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_iHpPoint]  DEFAULT ((0)) FOR [iHpPoint]
 GO
 ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sMpPoint]  DEFAULT ((0)) FOR [sMpPoint]
 GO
@@ -96,17 +96,19 @@ ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_iMagic2]  DEFAULT ((
 GO
 ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_iMagic3]  DEFAULT ((0)) FOR [iMagic3]
 GO
-ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_byFireR]  DEFAULT ((0)) FOR [byFireR]
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sFireR]  DEFAULT ((0)) FOR [sFireR]
 GO
-ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_byColdR]  DEFAULT ((0)) FOR [byColdR]
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sColdR]  DEFAULT ((0)) FOR [sColdR]
 GO
-ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_byLightningR]  DEFAULT ((0)) FOR [byLightningR]
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sLightningR]  DEFAULT ((0)) FOR [sLightningR]
 GO
-ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_byMagicR]  DEFAULT ((0)) FOR [byMagicR]
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sMagicR]  DEFAULT ((0)) FOR [sMagicR]
 GO
-ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_byDiseaseR]  DEFAULT ((0)) FOR [byDiseaseR]
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sDiseaseR]  DEFAULT ((0)) FOR [sDiseaseR]
 GO
-ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_byPoisonR]  DEFAULT ((0)) FOR [byPoisonR]
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sPoisonR]  DEFAULT ((0)) FOR [sPoisonR]
+GO
+ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sLightR]  DEFAULT ((0)) FOR [sLightR]
 GO
 ALTER TABLE [dbo].[K_MONSTER] ADD  CONSTRAINT [DF_K_MONSTER_sBulk]  DEFAULT ((0)) FOR [sBulk]
 GO
