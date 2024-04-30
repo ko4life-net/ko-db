@@ -1,0 +1,2438 @@
+diff --git a/src/data/BK_FRI_USERDATA.sql b/src/data/BK_FRI_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_FRI_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_FRI_WAREHOUSE.sql b/src/data/BK_FRI_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_FRI_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_MON_USERDATA.sql b/src/data/BK_MON_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_MON_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_MON_WAREHOUSE.sql b/src/data/BK_MON_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_MON_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_SAT_USERDATA.sql b/src/data/BK_SAT_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_SAT_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_SAT_WAREHOUSE.sql b/src/data/BK_SAT_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_SAT_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_SUN_USERDATA.sql b/src/data/BK_SUN_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_SUN_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_SUN_WAREHOUSE.sql b/src/data/BK_SUN_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_SUN_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_THU_USERDATA.sql b/src/data/BK_THU_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_THU_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_THU_WAREHOUSE.sql b/src/data/BK_THU_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_THU_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_TUE_USERDATA.sql b/src/data/BK_TUE_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_TUE_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_TUE_WAREHOUSE.sql b/src/data/BK_TUE_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_TUE_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_WED_USERDATA.sql b/src/data/BK_WED_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_WED_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BK_WED_WAREHOUSE.sql b/src/data/BK_WED_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BK_WED_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BLOCKED_USERDATA.sql b/src/data/BLOCKED_USERDATA.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BLOCKED_USERDATA.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/BLOCKED_WAREHOUSE.sql b/src/data/BLOCKED_WAREHOUSE.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/BLOCKED_WAREHOUSE.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/K_NPCPOS_BACK.sql b/src/data/K_NPCPOS_BACK.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/K_NPCPOS_BACK.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/K_NPCPOS_SORT.sql b/src/data/K_NPCPOS_SORT.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/K_NPCPOS_SORT.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/data/MONSTER_ITEM_TEST.sql b/src/data/MONSTER_ITEM_TEST.sql
+deleted file mode 100644
+index 5f28270..0000000
+--- a/src/data/MONSTER_ITEM_TEST.sql
++++ /dev/null
+@@ -1 +0,0 @@
+-﻿
+\ No newline at end of file
+diff --git a/src/procedure/BACKUP_FRI.sql b/src/procedure/BACKUP_FRI.sql
+deleted file mode 100644
+index d1c1a37..0000000
+--- a/src/procedure/BACKUP_FRI.sql
++++ /dev/null
+@@ -1,206 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-
+-
+---create by samma 2002.07.25
+-
+-CREATE PROCEDURE [dbo].[BACKUP_FRI] AS
+-
+-DECLARE
+-  @strUserID char(21),
+-  @Rank tinyint,
+-  @Title tinyint,
+-  @Level tinyint,
+-  @Exp int,
+-  @Loyalty int,
+-  @Knights smallint,
+-  @Fame tinyint
+-DECLARE
+-  @Str tinyint,
+-  @Sta tinyint,
+-  @Dex tinyint,
+-  @Intel tinyint,
+-  @Cha tinyint,
+-  @Points tinyint,
+-  @Gold int,
+-  @strSkill varchar(10),
+-  @strItem varchar(400)
+-
+-SET @strUserID = NULL SET @Rank = 0 SET @Title = 0 SET @Level = 0 SET @Exp = 0 SET @Loyalty = 0 SET @Knights = 0 SET
+-  @Fame = 0
+-SET @Str = 0 SET @Sta = 0 SET @Dex = 0 SET @Intel = 0 SET @Cha = 0 SET @Points = 0 SET @Gold = 0 SET
+-  @strSkill = NULL
+-SET @strItem = NULL
+-
+-DECLARE @row tinyint
+-SET @row = 0
+-
+-DECLARE Backup_Cursor CURSOR
+-FOR
+-SELECT
+-  strUserID,
+-  Rank,
+-  Title,
+-  [Level],
+-  [Exp],
+-  Loyalty,
+-  Knights,
+-  Fame,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Points,
+-  Gold,
+-  strSkill,
+-  strItem
+-FROM USERDATA
+-
+-OPEN Backup_Cursor
+-
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-@Rank,
+-@Title,
+-@Level,
+-@Exp,
+-@Loyalty,
+-@Knights,
+-@Fame,
+-@Str,
+-@Sta,
+-@Dex,
+-@Intel,
+-@Cha,
+-@Points,
+-@Gold,
+-@strSkill,
+-@strItem
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_FRI_USERDATA WHERE strUserID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_FRI_USERDATA (
+-          strUserID,
+-          Rank,
+-          Title,
+-          [Level],
+-          [Exp],
+-          Loyalty,
+-          Knights,
+-          Fame,
+-          Strong,
+-          Sta,
+-          Dex,
+-          Intel,
+-          Cha,
+-          Points,
+-          Gold,
+-          strSkill,
+-          strItem
+-        )
+-        VALUES (
+-          @strUserID,
+-          @Rank,
+-          @Title,
+-          @Level,
+-          @Exp,
+-          @Loyalty,
+-          @Knights,
+-          @Fame,
+-          @Str,
+-          @Sta,
+-          @Dex,
+-          @Intel,
+-          @Cha,
+-          @Points,
+-          @Gold,
+-          @strSkill,
+-          @strItem
+-        )
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_FRI_USERDATA
+-        SET
+-          Rank = @Rank,
+-          Title = @Title,
+-          [Level] = @Level,
+-          [Exp] = @Exp,
+-          Loyalty = @Loyalty,
+-          Knights = @Knights,
+-          Fame = @Fame,
+-          Strong = @Str,
+-          Sta = @Sta,
+-          Dex = @Dex,
+-          Intel = @Intel,
+-          Cha = @Cha,
+-          Points = @Points,
+-          Gold = @Gold,
+-          strSkill = @strSkill,
+-          strItem = @strItem
+-        WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-    @Rank,
+-    @Title,
+-    @Level,
+-    @Exp,
+-    @Loyalty,
+-    @Knights,
+-    @Fame,
+-    @Str,
+-    @Sta,
+-    @Dex,
+-    @Intel,
+-    @Cha,
+-    @Points,
+-    @Gold,
+-    @strSkill,
+-    @strItem
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-DECLARE @nMoney int, @WarehouseData varchar(1600)
+-SET @nMoney = 0 SET @WarehouseData = NULL
+-
+-DECLARE Backup_Item_Cursor CURSOR
+-FOR
+-SELECT
+-  strAccountID,
+-  nMoney,
+-  WarehouseData
+-FROM WAREHOUSE
+-
+-OPEN Backup_Item_Cursor
+-
+-FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_FRI_WAREHOUSE WHERE strAccountID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_FRI_WAREHOUSE (strAccountID, nMoney, warehouseData)
+-        VALUES (@strUserID, @nMoney, @WarehouseData)
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_FRI_WAREHOUSE
+-        SET nMoney = @nMoney, warehouseData = @WarehouseData WHERE strAccountID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-  END
+-
+-CLOSE Backup_Item_Cursor
+-DEALLOCATE Backup_Item_Cursor
+-
+-GO
+diff --git a/src/procedure/BACKUP_MON.sql b/src/procedure/BACKUP_MON.sql
+deleted file mode 100644
+index 1deae77..0000000
+--- a/src/procedure/BACKUP_MON.sql
++++ /dev/null
+@@ -1,206 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-
+-
+---create by samma 2002.07.25
+-
+-CREATE PROCEDURE [dbo].[BACKUP_MON] AS
+-
+-DECLARE
+-  @strUserID char(21),
+-  @Rank tinyint,
+-  @Title tinyint,
+-  @Level tinyint,
+-  @Exp int,
+-  @Loyalty int,
+-  @Knights smallint,
+-  @Fame tinyint
+-DECLARE
+-  @Str tinyint,
+-  @Sta tinyint,
+-  @Dex tinyint,
+-  @Intel tinyint,
+-  @Cha tinyint,
+-  @Points tinyint,
+-  @Gold int,
+-  @strSkill varchar(10),
+-  @strItem varchar(400)
+-
+-SET @strUserID = NULL SET @Rank = 0 SET @Title = 0 SET @Level = 0 SET @Exp = 0 SET @Loyalty = 0 SET @Knights = 0 SET
+-  @Fame = 0
+-SET @Str = 0 SET @Sta = 0 SET @Dex = 0 SET @Intel = 0 SET @Cha = 0 SET @Points = 0 SET @Gold = 0 SET
+-  @strSkill = NULL
+-SET @strItem = NULL
+-
+-DECLARE @row tinyint
+-SET @row = 0
+-
+-DECLARE Backup_Cursor CURSOR
+-FOR
+-SELECT
+-  strUserID,
+-  Rank,
+-  Title,
+-  [Level],
+-  [Exp],
+-  Loyalty,
+-  Knights,
+-  Fame,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Points,
+-  Gold,
+-  strSkill,
+-  strItem
+-FROM USERDATA
+-
+-OPEN Backup_Cursor
+-
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-@Rank,
+-@Title,
+-@Level,
+-@Exp,
+-@Loyalty,
+-@Knights,
+-@Fame,
+-@Str,
+-@Sta,
+-@Dex,
+-@Intel,
+-@Cha,
+-@Points,
+-@Gold,
+-@strSkill,
+-@strItem
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_MON_USERDATA WHERE strUserID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_MON_USERDATA (
+-          strUserID,
+-          Rank,
+-          Title,
+-          [Level],
+-          [Exp],
+-          Loyalty,
+-          Knights,
+-          Fame,
+-          Strong,
+-          Sta,
+-          Dex,
+-          Intel,
+-          Cha,
+-          Points,
+-          Gold,
+-          strSkill,
+-          strItem
+-        )
+-        VALUES (
+-          @strUserID,
+-          @Rank,
+-          @Title,
+-          @Level,
+-          @Exp,
+-          @Loyalty,
+-          @Knights,
+-          @Fame,
+-          @Str,
+-          @Sta,
+-          @Dex,
+-          @Intel,
+-          @Cha,
+-          @Points,
+-          @Gold,
+-          @strSkill,
+-          @strItem
+-        )
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_MON_USERDATA
+-        SET
+-          Rank = @Rank,
+-          Title = @Title,
+-          [Level] = @Level,
+-          [Exp] = @Exp,
+-          Loyalty = @Loyalty,
+-          Knights = @Knights,
+-          Fame = @Fame,
+-          Strong = @Str,
+-          Sta = @Sta,
+-          Dex = @Dex,
+-          Intel = @Intel,
+-          Cha = @Cha,
+-          Points = @Points,
+-          Gold = @Gold,
+-          strSkill = @strSkill,
+-          strItem = @strItem
+-        WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-    @Rank,
+-    @Title,
+-    @Level,
+-    @Exp,
+-    @Loyalty,
+-    @Knights,
+-    @Fame,
+-    @Str,
+-    @Sta,
+-    @Dex,
+-    @Intel,
+-    @Cha,
+-    @Points,
+-    @Gold,
+-    @strSkill,
+-    @strItem
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-DECLARE @nMoney int, @WarehouseData varchar(1600)
+-SET @nMoney = 0 SET @WarehouseData = NULL
+-
+-DECLARE Backup_Item_Cursor CURSOR
+-FOR
+-SELECT
+-  strAccountID,
+-  nMoney,
+-  WarehouseData
+-FROM WAREHOUSE
+-
+-OPEN Backup_Item_Cursor
+-
+-FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_MON_WAREHOUSE WHERE strAccountID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_MON_WAREHOUSE (strAccountID, nMoney, warehouseData)
+-        VALUES (@strUserID, @nMoney, @WarehouseData)
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_MON_WAREHOUSE
+-        SET nMoney = @nMoney, warehouseData = @WarehouseData WHERE strAccountID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-  END
+-
+-CLOSE Backup_Item_Cursor
+-DEALLOCATE Backup_Item_Cursor
+-
+-GO
+diff --git a/src/procedure/BACKUP_SAT.sql b/src/procedure/BACKUP_SAT.sql
+deleted file mode 100644
+index 5d57abf..0000000
+--- a/src/procedure/BACKUP_SAT.sql
++++ /dev/null
+@@ -1,206 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-
+-
+-
+-
+-CREATE PROCEDURE [dbo].[BACKUP_SAT] AS
+-
+-DECLARE
+-  @strUserID char(21),
+-  @Rank tinyint,
+-  @Title tinyint,
+-  @Level tinyint,
+-  @Exp int,
+-  @Loyalty int,
+-  @Knights smallint,
+-  @Fame tinyint
+-DECLARE
+-  @Str tinyint,
+-  @Sta tinyint,
+-  @Dex tinyint,
+-  @Intel tinyint,
+-  @Cha tinyint,
+-  @Points tinyint,
+-  @Gold int,
+-  @strSkill varchar(10),
+-  @strItem varchar(400)
+-
+-SET @strUserID = NULL SET @Rank = 0 SET @Title = 0 SET @Level = 0 SET @Exp = 0 SET @Loyalty = 0 SET @Knights = 0 SET
+-  @Fame = 0
+-SET @Str = 0 SET @Sta = 0 SET @Dex = 0 SET @Intel = 0 SET @Cha = 0 SET @Points = 0 SET @Gold = 0 SET
+-  @strSkill = NULL
+-SET @strItem = NULL
+-
+-DECLARE @row tinyint
+-SET @row = 0
+-
+-DECLARE Backup_Cursor CURSOR
+-FOR
+-SELECT
+-  strUserID,
+-  Rank,
+-  Title,
+-  [Level],
+-  [Exp],
+-  Loyalty,
+-  Knights,
+-  Fame,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Points,
+-  Gold,
+-  strSkill,
+-  strItem
+-FROM USERDATA
+-
+-OPEN Backup_Cursor
+-
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-@Rank,
+-@Title,
+-@Level,
+-@Exp,
+-@Loyalty,
+-@Knights,
+-@Fame,
+-@Str,
+-@Sta,
+-@Dex,
+-@Intel,
+-@Cha,
+-@Points,
+-@Gold,
+-@strSkill,
+-@strItem
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_SAT_USERDATA WHERE strUserID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_SAT_USERDATA (
+-          strUserID,
+-          Rank,
+-          Title,
+-          [Level],
+-          [Exp],
+-          Loyalty,
+-          Knights,
+-          Fame,
+-          Strong,
+-          Sta,
+-          Dex,
+-          Intel,
+-          Cha,
+-          Points,
+-          Gold,
+-          strSkill,
+-          strItem
+-        )
+-        VALUES (
+-          @strUserID,
+-          @Rank,
+-          @Title,
+-          @Level,
+-          @Exp,
+-          @Loyalty,
+-          @Knights,
+-          @Fame,
+-          @Str,
+-          @Sta,
+-          @Dex,
+-          @Intel,
+-          @Cha,
+-          @Points,
+-          @Gold,
+-          @strSkill,
+-          @strItem
+-        )
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_SAT_USERDATA
+-        SET
+-          Rank = @Rank,
+-          Title = @Title,
+-          [Level] = @Level,
+-          [Exp] = @Exp,
+-          Loyalty = @Loyalty,
+-          Knights = @Knights,
+-          Fame = @Fame,
+-          Strong = @Str,
+-          Sta = @Sta,
+-          Dex = @Dex,
+-          Intel = @Intel,
+-          Cha = @Cha,
+-          Points = @Points,
+-          Gold = @Gold,
+-          strSkill = @strSkill,
+-          strItem = @strItem
+-        WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-    @Rank,
+-    @Title,
+-    @Level,
+-    @Exp,
+-    @Loyalty,
+-    @Knights,
+-    @Fame,
+-    @Str,
+-    @Sta,
+-    @Dex,
+-    @Intel,
+-    @Cha,
+-    @Points,
+-    @Gold,
+-    @strSkill,
+-    @strItem
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-DECLARE @nMoney int, @WarehouseData varchar(1600)
+-SET @nMoney = 0 SET @WarehouseData = NULL
+-
+-DECLARE Backup_Item_Cursor CURSOR
+-FOR
+-SELECT
+-  strAccountID,
+-  nMoney,
+-  WarehouseData
+-FROM WAREHOUSE
+-
+-OPEN Backup_Item_Cursor
+-
+-FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_SAT_WAREHOUSE WHERE strAccountID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_SAT_WAREHOUSE (strAccountID, nMoney, warehouseData)
+-        VALUES (@strUserID, @nMoney, @WarehouseData)
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_SAT_WAREHOUSE
+-        SET nMoney = @nMoney, warehouseData = @WarehouseData WHERE strAccountID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-  END
+-
+-CLOSE Backup_Item_Cursor
+-DEALLOCATE Backup_Item_Cursor
+-
+-GO
+diff --git a/src/procedure/BACKUP_SUN.sql b/src/procedure/BACKUP_SUN.sql
+deleted file mode 100644
+index 411b861..0000000
+--- a/src/procedure/BACKUP_SUN.sql
++++ /dev/null
+@@ -1,204 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-
+-
+-CREATE PROCEDURE [dbo].[BACKUP_SUN] AS
+-
+-DECLARE
+-  @strUserID char(21),
+-  @Rank tinyint,
+-  @Title tinyint,
+-  @Level tinyint,
+-  @Exp int,
+-  @Loyalty int,
+-  @Knights smallint,
+-  @Fame tinyint
+-DECLARE
+-  @Str tinyint,
+-  @Sta tinyint,
+-  @Dex tinyint,
+-  @Intel tinyint,
+-  @Cha tinyint,
+-  @Points tinyint,
+-  @Gold int,
+-  @strSkill varchar(10),
+-  @strItem varchar(400)
+-
+-SET @strUserID = NULL SET @Rank = 0 SET @Title = 0 SET @Level = 0 SET @Exp = 0 SET @Loyalty = 0 SET @Knights = 0 SET
+-  @Fame = 0
+-SET @Str = 0 SET @Sta = 0 SET @Dex = 0 SET @Intel = 0 SET @Cha = 0 SET @Points = 0 SET @Gold = 0 SET
+-  @strSkill = NULL
+-SET @strItem = NULL
+-
+-DECLARE @row tinyint
+-SET @row = 0
+-
+-DECLARE Backup_Cursor CURSOR
+-FOR
+-SELECT
+-  strUserID,
+-  Rank,
+-  Title,
+-  [Level],
+-  [Exp],
+-  Loyalty,
+-  Knights,
+-  Fame,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Points,
+-  Gold,
+-  strSkill,
+-  strItem
+-FROM USERDATA
+-
+-OPEN Backup_Cursor
+-
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-@Rank,
+-@Title,
+-@Level,
+-@Exp,
+-@Loyalty,
+-@Knights,
+-@Fame,
+-@Str,
+-@Sta,
+-@Dex,
+-@Intel,
+-@Cha,
+-@Points,
+-@Gold,
+-@strSkill,
+-@strItem
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_SUN_USERDATA WHERE strUserID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_SUN_USERDATA (
+-          strUserID,
+-          Rank,
+-          Title,
+-          [Level],
+-          [Exp],
+-          Loyalty,
+-          Knights,
+-          Fame,
+-          Strong,
+-          Sta,
+-          Dex,
+-          Intel,
+-          Cha,
+-          Points,
+-          Gold,
+-          strSkill,
+-          strItem
+-        )
+-        VALUES (
+-          @strUserID,
+-          @Rank,
+-          @Title,
+-          @Level,
+-          @Exp,
+-          @Loyalty,
+-          @Knights,
+-          @Fame,
+-          @Str,
+-          @Sta,
+-          @Dex,
+-          @Intel,
+-          @Cha,
+-          @Points,
+-          @Gold,
+-          @strSkill,
+-          @strItem
+-        )
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_SUN_USERDATA
+-        SET
+-          Rank = @Rank,
+-          Title = @Title,
+-          [Level] = @Level,
+-          [Exp] = @Exp,
+-          Loyalty = @Loyalty,
+-          Knights = @Knights,
+-          Fame = @Fame,
+-          Strong = @Str,
+-          Sta = @Sta,
+-          Dex = @Dex,
+-          Intel = @Intel,
+-          Cha = @Cha,
+-          Points = @Points,
+-          Gold = @Gold,
+-          strSkill = @strSkill,
+-          strItem = @strItem
+-        WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-    @Rank,
+-    @Title,
+-    @Level,
+-    @Exp,
+-    @Loyalty,
+-    @Knights,
+-    @Fame,
+-    @Str,
+-    @Sta,
+-    @Dex,
+-    @Intel,
+-    @Cha,
+-    @Points,
+-    @Gold,
+-    @strSkill,
+-    @strItem
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-DECLARE @nMoney int, @WarehouseData varchar(1600)
+-SET @nMoney = 0 SET @WarehouseData = NULL
+-
+-DECLARE Backup_Item_Cursor CURSOR
+-FOR
+-SELECT
+-  strAccountID,
+-  nMoney,
+-  WarehouseData
+-FROM WAREHOUSE
+-
+-OPEN Backup_Item_Cursor
+-
+-FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_SUN_WAREHOUSE WHERE strAccountID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_SUN_WAREHOUSE (strAccountID, nMoney, warehouseData)
+-        VALUES (@strUserID, @nMoney, @WarehouseData)
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_SUN_WAREHOUSE
+-        SET nMoney = @nMoney, warehouseData = @WarehouseData WHERE strAccountID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-  END
+-
+-CLOSE Backup_Item_Cursor
+-DEALLOCATE Backup_Item_Cursor
+-
+-GO
+diff --git a/src/procedure/BACKUP_THU.sql b/src/procedure/BACKUP_THU.sql
+deleted file mode 100644
+index 39117df..0000000
+--- a/src/procedure/BACKUP_THU.sql
++++ /dev/null
+@@ -1,205 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-
+-
+-
+-CREATE PROCEDURE [dbo].[BACKUP_THU] AS
+-
+-DECLARE
+-  @strUserID char(21),
+-  @Rank tinyint,
+-  @Title tinyint,
+-  @Level tinyint,
+-  @Exp int,
+-  @Loyalty int,
+-  @Knights smallint,
+-  @Fame tinyint
+-DECLARE
+-  @Str tinyint,
+-  @Sta tinyint,
+-  @Dex tinyint,
+-  @Intel tinyint,
+-  @Cha tinyint,
+-  @Points tinyint,
+-  @Gold int,
+-  @strSkill varchar(10),
+-  @strItem varchar(400)
+-
+-SET @strUserID = NULL SET @Rank = 0 SET @Title = 0 SET @Level = 0 SET @Exp = 0 SET @Loyalty = 0 SET @Knights = 0 SET
+-  @Fame = 0
+-SET @Str = 0 SET @Sta = 0 SET @Dex = 0 SET @Intel = 0 SET @Cha = 0 SET @Points = 0 SET @Gold = 0 SET
+-  @strSkill = NULL
+-SET @strItem = NULL
+-
+-DECLARE @row tinyint
+-SET @row = 0
+-
+-DECLARE Backup_Cursor CURSOR
+-FOR
+-SELECT
+-  strUserID,
+-  Rank,
+-  Title,
+-  [Level],
+-  [Exp],
+-  Loyalty,
+-  Knights,
+-  Fame,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Points,
+-  Gold,
+-  strSkill,
+-  strItem
+-FROM USERDATA
+-
+-OPEN Backup_Cursor
+-
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-@Rank,
+-@Title,
+-@Level,
+-@Exp,
+-@Loyalty,
+-@Knights,
+-@Fame,
+-@Str,
+-@Sta,
+-@Dex,
+-@Intel,
+-@Cha,
+-@Points,
+-@Gold,
+-@strSkill,
+-@strItem
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_THU_USERDATA WHERE strUserID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_THU_USERDATA (
+-          strUserID,
+-          Rank,
+-          Title,
+-          [Level],
+-          [Exp],
+-          Loyalty,
+-          Knights,
+-          Fame,
+-          Strong,
+-          Sta,
+-          Dex,
+-          Intel,
+-          Cha,
+-          Points,
+-          Gold,
+-          strSkill,
+-          strItem
+-        )
+-        VALUES (
+-          @strUserID,
+-          @Rank,
+-          @Title,
+-          @Level,
+-          @Exp,
+-          @Loyalty,
+-          @Knights,
+-          @Fame,
+-          @Str,
+-          @Sta,
+-          @Dex,
+-          @Intel,
+-          @Cha,
+-          @Points,
+-          @Gold,
+-          @strSkill,
+-          @strItem
+-        )
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_THU_USERDATA
+-        SET
+-          Rank = @Rank,
+-          Title = @Title,
+-          [Level] = @Level,
+-          [Exp] = @Exp,
+-          Loyalty = @Loyalty,
+-          Knights = @Knights,
+-          Fame = @Fame,
+-          Strong = @Str,
+-          Sta = @Sta,
+-          Dex = @Dex,
+-          Intel = @Intel,
+-          Cha = @Cha,
+-          Points = @Points,
+-          Gold = @Gold,
+-          strSkill = @strSkill,
+-          strItem = @strItem
+-        WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-    @Rank,
+-    @Title,
+-    @Level,
+-    @Exp,
+-    @Loyalty,
+-    @Knights,
+-    @Fame,
+-    @Str,
+-    @Sta,
+-    @Dex,
+-    @Intel,
+-    @Cha,
+-    @Points,
+-    @Gold,
+-    @strSkill,
+-    @strItem
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-DECLARE @nMoney int, @WarehouseData varchar(1600)
+-SET @nMoney = 0 SET @WarehouseData = NULL
+-
+-DECLARE Backup_Item_Cursor CURSOR
+-FOR
+-SELECT
+-  strAccountID,
+-  nMoney,
+-  WarehouseData
+-FROM WAREHOUSE
+-
+-OPEN Backup_Item_Cursor
+-
+-FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_THU_WAREHOUSE WHERE strAccountID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_THU_WAREHOUSE (strAccountID, nMoney, warehouseData)
+-        VALUES (@strUserID, @nMoney, @WarehouseData)
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_THU_WAREHOUSE
+-        SET nMoney = @nMoney, warehouseData = @WarehouseData WHERE strAccountID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-  END
+-
+-CLOSE Backup_Item_Cursor
+-DEALLOCATE Backup_Item_Cursor
+-
+-GO
+diff --git a/src/procedure/BACKUP_TUE.sql b/src/procedure/BACKUP_TUE.sql
+deleted file mode 100644
+index 25f9b51..0000000
+--- a/src/procedure/BACKUP_TUE.sql
++++ /dev/null
+@@ -1,204 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-
+-
+-CREATE PROCEDURE [dbo].[BACKUP_TUE] AS
+-
+-DECLARE
+-  @strUserID char(21),
+-  @Rank tinyint,
+-  @Title tinyint,
+-  @Level tinyint,
+-  @Exp int,
+-  @Loyalty int,
+-  @Knights smallint,
+-  @Fame tinyint
+-DECLARE
+-  @Str tinyint,
+-  @Sta tinyint,
+-  @Dex tinyint,
+-  @Intel tinyint,
+-  @Cha tinyint,
+-  @Points tinyint,
+-  @Gold int,
+-  @strSkill varchar(10),
+-  @strItem varchar(400)
+-
+-SET @strUserID = NULL SET @Rank = 0 SET @Title = 0 SET @Level = 0 SET @Exp = 0 SET @Loyalty = 0 SET @Knights = 0 SET
+-  @Fame = 0
+-SET @Str = 0 SET @Sta = 0 SET @Dex = 0 SET @Intel = 0 SET @Cha = 0 SET @Points = 0 SET @Gold = 0 SET
+-  @strSkill = NULL
+-SET @strItem = NULL
+-
+-DECLARE @row tinyint
+-SET @row = 0
+-
+-DECLARE Backup_Cursor CURSOR
+-FOR
+-SELECT
+-  strUserID,
+-  Rank,
+-  Title,
+-  [Level],
+-  [Exp],
+-  Loyalty,
+-  Knights,
+-  Fame,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Points,
+-  Gold,
+-  strSkill,
+-  strItem
+-FROM USERDATA
+-
+-OPEN Backup_Cursor
+-
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-@Rank,
+-@Title,
+-@Level,
+-@Exp,
+-@Loyalty,
+-@Knights,
+-@Fame,
+-@Str,
+-@Sta,
+-@Dex,
+-@Intel,
+-@Cha,
+-@Points,
+-@Gold,
+-@strSkill,
+-@strItem
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_TUE_USERDATA WHERE strUserID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_TUE_USERDATA (
+-          strUserID,
+-          Rank,
+-          Title,
+-          [Level],
+-          [Exp],
+-          Loyalty,
+-          Knights,
+-          Fame,
+-          Strong,
+-          Sta,
+-          Dex,
+-          Intel,
+-          Cha,
+-          Points,
+-          Gold,
+-          strSkill,
+-          strItem
+-        )
+-        VALUES (
+-          @strUserID,
+-          @Rank,
+-          @Title,
+-          @Level,
+-          @Exp,
+-          @Loyalty,
+-          @Knights,
+-          @Fame,
+-          @Str,
+-          @Sta,
+-          @Dex,
+-          @Intel,
+-          @Cha,
+-          @Points,
+-          @Gold,
+-          @strSkill,
+-          @strItem
+-        )
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_TUE_USERDATA
+-        SET
+-          Rank = @Rank,
+-          Title = @Title,
+-          [Level] = @Level,
+-          [Exp] = @Exp,
+-          Loyalty = @Loyalty,
+-          Knights = @Knights,
+-          Fame = @Fame,
+-          Strong = @Str,
+-          Sta = @Sta,
+-          Dex = @Dex,
+-          Intel = @Intel,
+-          Cha = @Cha,
+-          Points = @Points,
+-          Gold = @Gold,
+-          strSkill = @strSkill,
+-          strItem = @strItem
+-        WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-    @Rank,
+-    @Title,
+-    @Level,
+-    @Exp,
+-    @Loyalty,
+-    @Knights,
+-    @Fame,
+-    @Str,
+-    @Sta,
+-    @Dex,
+-    @Intel,
+-    @Cha,
+-    @Points,
+-    @Gold,
+-    @strSkill,
+-    @strItem
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-DECLARE @nMoney int, @WarehouseData varchar(1600)
+-SET @nMoney = 0 SET @WarehouseData = NULL
+-
+-DECLARE Backup_Item_Cursor CURSOR
+-FOR
+-SELECT
+-  strAccountID,
+-  nMoney,
+-  WarehouseData
+-FROM WAREHOUSE
+-
+-OPEN Backup_Item_Cursor
+-
+-FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_TUE_WAREHOUSE WHERE strAccountID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_TUE_WAREHOUSE (strAccountID, nMoney, warehouseData)
+-        VALUES (@strUserID, @nMoney, @WarehouseData)
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_TUE_WAREHOUSE
+-        SET nMoney = @nMoney, warehouseData = @WarehouseData WHERE strAccountID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-  END
+-
+-CLOSE Backup_Item_Cursor
+-DEALLOCATE Backup_Item_Cursor
+-
+-GO
+diff --git a/src/procedure/BACKUP_USERDATA.sql b/src/procedure/BACKUP_USERDATA.sql
+deleted file mode 100644
+index f0584ba..0000000
+--- a/src/procedure/BACKUP_USERDATA.sql
++++ /dev/null
+@@ -1,91 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER OFF
+-GO
+-
+-
+-
+-CREATE PROCEDURE [dbo].[BACKUP_USERDATA] AS
+-
+-DECLARE @Rank tinyint, @Title tinyint, @Level tinyint
+-DECLARE @Exp int, @Loyalty int
+-DECLARE @Knights smallint, @Fame tinyint, @Strong tinyint, @Sta tinyint, @Dex tinyint
+-DECLARE @Intel tinyint, @Cha tinyint, @Points tinyint, @Gold int, @Zone tinyint
+-DECLARE @strSkill varchar(20), @strItem varchar(400)
+-
+-BEGIN TRAN
+-
+-SELECT
+-  @Rank = Rank,
+-  @Title = Title,
+-  @Level = [Level],
+-  @Exp = [Exp],
+-  @Loyalty = Loyalty,
+-  @Knights = Knights,
+-  @Fame = Fame,
+-  @Strong = Strong,
+-  @Sta = Sta,
+-  @Dex = Dex,
+-  @Intel = Intel,
+-  @Cha = Cha,
+-  @Points = Points,
+-  @Gold = Gold,
+-  @strSkill = strSkill,
+-  @strItem = strItem
+-FROM BK_TUE_USERDATA /*날짜 확인*/ WHERE strUserId = '나여요'     -- 이 부분은 이름만 수정하면 되요 ^^;
+-
+-INSERT INTO USERDATA (
+-  strUserID, Nation, Race, [Class], HairColor, Rank, Title, [Level], [Exp], Loyalty, Face, City,
+-  Knights,
+-  Fame,
+-  Hp,
+-  Mp,
+-  Sp,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Authority,
+-  Points,
+-  Gold,
+-  [Zone],
+-  Bind,
+-  PX,
+-  PZ,
+-  PY,
+-  strSkill,
+-  strItem
+-)
+-
+-VALUES (/*@Char*/
+-  '나여요', /*@Nation*/ 2, /*@Race*/ 1, /*@Class*/ 201, /*@HairColor*/ 0, @Rank, @Title, @Level, @Exp,
+-  @Loyalty,
+-  /* @Face*/0,
+-  /*@City*/0,
+-  @Knights,
+-  @Fame,
+-  /*@Hp*/100,
+-  /*@Mp*/100,
+-  /*@Sp*/100,
+-  @Strong,
+-  @Sta,
+-  @Dex,
+-  @Intel,
+-  @Cha,
+-  /*@Authority*/1,
+-  @Points,
+-  @Gold,
+-  /*@Zone*/2,
+-  /*@Bind*/ -1,
+-  /*@PX*/50000,
+-  /*@PZ*/50000,
+-  /*@PY*/0,
+-  @strSkill,
+-  CAST(@strItem AS binary(400))
+-)
+-
+-
+-COMMIT TRAN
+-
+-GO
+diff --git a/src/procedure/BACKUP_WAREHOUSE.sql b/src/procedure/BACKUP_WAREHOUSE.sql
+deleted file mode 100644
+index b63765e..0000000
+--- a/src/procedure/BACKUP_WAREHOUSE.sql
++++ /dev/null
+@@ -1,25 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER OFF
+-GO
+-
+-
+-
+-CREATE PROCEDURE [dbo].[BACKUP_WAREHOUSE] AS
+-
+-DECLARE @WarehouseData varchar(1600), @strAccountID char(21), @nMoney int
+-
+-BEGIN TRAN
+-
+-SELECT
+-  @WarehouseData = WarehouseData,
+-  @nMoney = nMoney
+-FROM BK_MON_WAREHOUSE WHERE strAccountID = '97414061'     -- 이 부분은 이름만 수정하면 되요, 날짜두요 ^^;
+-
+-INSERT INTO WAREHOUSE (strAccountID, nMoney, WarehouseData)
+-
+-VALUES ('97414061', @nMoney, @WarehouseData)
+-
+-COMMIT TRAN
+-
+-GO
+diff --git a/src/procedure/BACKUP_WED.sql b/src/procedure/BACKUP_WED.sql
+deleted file mode 100644
+index fb82118..0000000
+--- a/src/procedure/BACKUP_WED.sql
++++ /dev/null
+@@ -1,204 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-
+-
+-CREATE PROCEDURE [dbo].[BACKUP_WED] AS
+-
+-DECLARE
+-  @strUserID char(21),
+-  @Rank tinyint,
+-  @Title tinyint,
+-  @Level tinyint,
+-  @Exp int,
+-  @Loyalty int,
+-  @Knights smallint,
+-  @Fame tinyint
+-DECLARE
+-  @Str tinyint,
+-  @Sta tinyint,
+-  @Dex tinyint,
+-  @Intel tinyint,
+-  @Cha tinyint,
+-  @Points tinyint,
+-  @Gold int,
+-  @strSkill varchar(10),
+-  @strItem varchar(400)
+-
+-SET @strUserID = NULL SET @Rank = 0 SET @Title = 0 SET @Level = 0 SET @Exp = 0 SET @Loyalty = 0 SET @Knights = 0 SET
+-  @Fame = 0
+-SET @Str = 0 SET @Sta = 0 SET @Dex = 0 SET @Intel = 0 SET @Cha = 0 SET @Points = 0 SET @Gold = 0 SET
+-  @strSkill = NULL
+-SET @strItem = NULL
+-
+-DECLARE @row tinyint
+-SET @row = 0
+-
+-DECLARE Backup_Cursor CURSOR
+-FOR
+-SELECT
+-  strUserID,
+-  Rank,
+-  Title,
+-  [Level],
+-  [Exp],
+-  Loyalty,
+-  Knights,
+-  Fame,
+-  Strong,
+-  Sta,
+-  Dex,
+-  Intel,
+-  Cha,
+-  Points,
+-  Gold,
+-  strSkill,
+-  strItem
+-FROM USERDATA
+-
+-OPEN Backup_Cursor
+-
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-@Rank,
+-@Title,
+-@Level,
+-@Exp,
+-@Loyalty,
+-@Knights,
+-@Fame,
+-@Str,
+-@Sta,
+-@Dex,
+-@Intel,
+-@Cha,
+-@Points,
+-@Gold,
+-@strSkill,
+-@strItem
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_WED_USERDATA WHERE strUserID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_WED_USERDATA (
+-          strUserID,
+-          Rank,
+-          Title,
+-          [Level],
+-          [Exp],
+-          Loyalty,
+-          Knights,
+-          Fame,
+-          Strong,
+-          Sta,
+-          Dex,
+-          Intel,
+-          Cha,
+-          Points,
+-          Gold,
+-          strSkill,
+-          strItem
+-        )
+-        VALUES (
+-          @strUserID,
+-          @Rank,
+-          @Title,
+-          @Level,
+-          @Exp,
+-          @Loyalty,
+-          @Knights,
+-          @Fame,
+-          @Str,
+-          @Sta,
+-          @Dex,
+-          @Intel,
+-          @Cha,
+-          @Points,
+-          @Gold,
+-          @strSkill,
+-          @strItem
+-        )
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_WED_USERDATA
+-        SET
+-          Rank = @Rank,
+-          Title = @Title,
+-          [Level] = @Level,
+-          [Exp] = @Exp,
+-          Loyalty = @Loyalty,
+-          Knights = @Knights,
+-          Fame = @Fame,
+-          Strong = @Str,
+-          Sta = @Sta,
+-          Dex = @Dex,
+-          Intel = @Intel,
+-          Cha = @Cha,
+-          Points = @Points,
+-          Gold = @Gold,
+-          strSkill = @strSkill,
+-          strItem = @strItem
+-        WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID,
+-    @Rank,
+-    @Title,
+-    @Level,
+-    @Exp,
+-    @Loyalty,
+-    @Knights,
+-    @Fame,
+-    @Str,
+-    @Sta,
+-    @Dex,
+-    @Intel,
+-    @Cha,
+-    @Points,
+-    @Gold,
+-    @strSkill,
+-    @strItem
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-DECLARE @nMoney int, @WarehouseData varchar(1600)
+-SET @nMoney = 0 SET @WarehouseData = NULL
+-
+-DECLARE Backup_Item_Cursor CURSOR
+-FOR
+-SELECT
+-  strAccountID,
+-  nMoney,
+-  WarehouseData
+-FROM WAREHOUSE
+-
+-OPEN Backup_Item_Cursor
+-
+-FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*) FROM BK_WED_WAREHOUSE WHERE strAccountID = @strUserID
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO BK_WED_WAREHOUSE (strAccountID, nMoney, warehouseData)
+-        VALUES (@strUserID, @nMoney, @WarehouseData)
+-      END
+-    IF @row > 0
+-      BEGIN
+-        UPDATE BK_WED_WAREHOUSE
+-        SET nMoney = @nMoney, warehouseData = @WarehouseData WHERE strAccountID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Item_Cursor INTO @strUserID, @nMoney, @WarehouseData
+-  END
+-
+-CLOSE Backup_Item_Cursor
+-DEALLOCATE Backup_Item_Cursor
+-
+-GO
+diff --git a/src/procedure/EXEC_SEARCH_USER_ITEM.sql b/src/procedure/EXEC_SEARCH_USER_ITEM.sql
+deleted file mode 100644
+index a3b3b7b..0000000
+--- a/src/procedure/EXEC_SEARCH_USER_ITEM.sql
++++ /dev/null
+@@ -1,44 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER OFF
+-GO
+-
+-
+-CREATE PROCEDURE [dbo].[EXEC_SEARCH_USER_ITEM]
+-AS
+-
+-SET NOCOUNT ON
+-DECLARE @strUserID char(21)
+-DECLARE @strItem binary(400)
+-DECLARE job1 CURSOR FOR
+-
+-SELECT
+-  strUserID,
+-  strItem
+-FROM USERDATA
+-
+-OPEN job1
+-FETCH NEXT FROM job1
+-INTO @strUserID, @strItem
+-WHILE @@fetch_status = 0
+-  BEGIN
+-    DECLARE @strAccountID char(21)
+-    DECLARE @strWareHouse char(1600)
+-
+-    SELECT @strAccountID = strAccountID
+-    FROM ACCOUNT_CHAR
+-    WHERE @struserid = strCharID1 OR @struserid = strCharID2 OR @struserid = strCharID3
+-    SELECT @strWareHouse = WarehouseData FROM WAREHOUSE WHERE strAccountID = @strAccountID
+-
+-    INSERT INTO SEARCH_USERDATA (strUserId, strAccountID, strItem, strWarehouseData)
+-    VALUES (@strUserID, @strAccountID, @strItem, @strWareHouse)
+-
+-
+-    FETCH NEXT FROM job1
+-    INTO @strUserID, @strItem
+-  END
+-CLOSE job1
+-DEALLOCATE job1
+-SET NOCOUNT OFF
+-
+-GO
+diff --git a/src/procedure/LEVEL_CHEAT.sql b/src/procedure/LEVEL_CHEAT.sql
+deleted file mode 100644
+index 0e03b4e..0000000
+--- a/src/procedure/LEVEL_CHEAT.sql
++++ /dev/null
+@@ -1,114 +0,0 @@
+-﻿SET ANSI_NULLS OFF
+-GO
+-SET QUOTED_IDENTIFIER OFF
+-GO
+-
+-
+-CREATE PROCEDURE [dbo].[LEVEL_CHEAT] AS
+-
+-
+-DECLARE @strUserID char(21), @Level tinyint, @row tinyint, @LevelYesterday tinyint
+-SET @strUserID = NULL
+-SET @Level = 0
+-SET @row = 0
+-SET @LevelYesterday = 0
+-
+-
+-DECLARE Backup_Cursor CURSOR FOR
+-SELECT
+-  strUserID,
+-  [Level]
+-FROM USERDATA WHERE [Level] >= 20
+-
+-OPEN Backup_Cursor
+-FETCH NEXT FROM Backup_Cursor INTO @strUserID, @Level
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*)
+-    FROM LEVEL_CHEAT_TEMP
+-    WHERE strUserID = @strUserID
+-
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO LEVEL_CHEAT_TEMP (strUserID, [Level], [LevelYesterday])
+-        VALUES (@strUserID, @Level, 0)
+-      END
+-
+-    IF @row > 0
+-      BEGIN
+-        UPDATE LEVEL_CHEAT_TEMP
+-        SET [Level] = @Level WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Cursor INTO @strUserID, @Level
+-  END
+-
+-CLOSE Backup_Cursor
+-DEALLOCATE Backup_Cursor
+-
+-
+-DECLARE Backup_Yesterday_Cursor CURSOR FOR
+-
+-SELECT
+-  strUserID,
+-  [Level]
+-FROM BK_TUE_USERDATA --WHERE [Level] >= 20
+-
+-OPEN Backup_Yesterday_Cursor
+-FETCH NEXT FROM Backup_Yesterday_Cursor INTO @strUserID, @Level
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*)
+-    FROM LEVEL_CHEAT_TEMP
+-    WHERE strUserID = @strUserID
+-
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO LEVEL_CHEAT (strUserID, [LevelYesterday])
+-        VALUES (@strUserID, @Level)
+-      END
+-
+-    IF @row > 0
+-      BEGIN
+-        UPDATE LEVEL_CHEAT_TEMP
+-        SET [LevelYesterday] = @Level WHERE strUserID = @strUserID
+-      END
+-
+-    FETCH NEXT FROM Backup_Yesterday_Cursor INTO @strUserID, @Level
+-  END
+-
+-CLOSE Backup_Yesterday_Cursor
+-DEALLOCATE Backup_Yesterday_Cursor
+-
+-DECLARE Backup_Compare_Cursor CURSOR FOR
+-
+-SELECT
+-  strUserID,
+-  [Level],
+-  [LevelYesterday]
+-FROM LEVEL_CHEAT_TEMP WHERE ([Level] - [LevelYesterday]) >= 5
+-
+-OPEN Backup_Compare_Cursor
+-FETCH NEXT FROM Backup_Compare_Cursor INTO @strUserID, @Level, @LevelYesterday
+-
+-WHILE @@FETCH_STATUS = 0
+-  BEGIN
+-    SELECT @row = COUNT(*)
+-    FROM LEVEL_CHEAT
+-    WHERE strUserID = @strUserID
+-
+-    IF @row = 0
+-      BEGIN
+-        INSERT INTO LEVEL_CHEAT (strUserID, [Level], [LevelYesterday], [LevelDifference])
+-        VALUES (@strUserID, @Level, @LevelYesterday, @Level - @LevelYesterday)
+-      END
+-
+-    FETCH NEXT FROM Backup_Compare_Cursor INTO @strUserID, @Level, @LevelYesterday
+-  END
+-
+-CLOSE Backup_Compare_Cursor
+-DEALLOCATE Backup_Compare_Cursor
+-
+-GO
+diff --git a/src/schema/BK_FRI_USERDATA.sql b/src/schema/BK_FRI_USERDATA.sql
+deleted file mode 100644
+index adcfe2e..0000000
+--- a/src/schema/BK_FRI_USERDATA.sql
++++ /dev/null
+@@ -1,28 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_FRI_USERDATA](
+-	[strUserID] [char](21) NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL,
+- CONSTRAINT [PK_BK_FRI_USERDATA] PRIMARY KEY CLUSTERED 
+-(
+-	[strUserID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_FRI_WAREHOUSE.sql b/src/schema/BK_FRI_WAREHOUSE.sql
+deleted file mode 100644
+index cd353a7..0000000
+--- a/src/schema/BK_FRI_WAREHOUSE.sql
++++ /dev/null
+@@ -1,14 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_FRI_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[warehouseData] [varchar](1600) NULL,
+- CONSTRAINT [PK_BK_FRI_WAREHOUSE] PRIMARY KEY CLUSTERED 
+-(
+-	[strAccountID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_MON_USERDATA.sql b/src/schema/BK_MON_USERDATA.sql
+deleted file mode 100644
+index 11a3a5f..0000000
+--- a/src/schema/BK_MON_USERDATA.sql
++++ /dev/null
+@@ -1,28 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_MON_USERDATA](
+-	[strUserID] [char](21) NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL,
+- CONSTRAINT [PK_BK_MON_USERDATA] PRIMARY KEY CLUSTERED 
+-(
+-	[strUserID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_MON_WAREHOUSE.sql b/src/schema/BK_MON_WAREHOUSE.sql
+deleted file mode 100644
+index 72cde17..0000000
+--- a/src/schema/BK_MON_WAREHOUSE.sql
++++ /dev/null
+@@ -1,14 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_MON_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[warehouseData] [varchar](1600) NULL,
+- CONSTRAINT [PK_BK_MON_WAREHOUSE] PRIMARY KEY CLUSTERED 
+-(
+-	[strAccountID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_SAT_USERDATA.sql b/src/schema/BK_SAT_USERDATA.sql
+deleted file mode 100644
+index 29521b5..0000000
+--- a/src/schema/BK_SAT_USERDATA.sql
++++ /dev/null
+@@ -1,28 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_SAT_USERDATA](
+-	[strUserID] [char](21) NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL,
+- CONSTRAINT [PK_BK_SAT_USERDATA] PRIMARY KEY CLUSTERED 
+-(
+-	[strUserID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_SAT_WAREHOUSE.sql b/src/schema/BK_SAT_WAREHOUSE.sql
+deleted file mode 100644
+index 6e29bf2..0000000
+--- a/src/schema/BK_SAT_WAREHOUSE.sql
++++ /dev/null
+@@ -1,14 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_SAT_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[warehouseData] [varchar](1600) NULL,
+- CONSTRAINT [PK_BK_SAT_WAREHOUSE] PRIMARY KEY CLUSTERED 
+-(
+-	[strAccountID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_SUN_USERDATA.sql b/src/schema/BK_SUN_USERDATA.sql
+deleted file mode 100644
+index 2d392f6..0000000
+--- a/src/schema/BK_SUN_USERDATA.sql
++++ /dev/null
+@@ -1,28 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_SUN_USERDATA](
+-	[strUserID] [char](21) NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL,
+- CONSTRAINT [PK_BK_SUN_USERDATA] PRIMARY KEY CLUSTERED 
+-(
+-	[strUserID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_SUN_WAREHOUSE.sql b/src/schema/BK_SUN_WAREHOUSE.sql
+deleted file mode 100644
+index 94c77be..0000000
+--- a/src/schema/BK_SUN_WAREHOUSE.sql
++++ /dev/null
+@@ -1,14 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_SUN_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[warehouseData] [varchar](1600) NULL,
+- CONSTRAINT [PK_BK_SUN_WAREHOUSE] PRIMARY KEY CLUSTERED 
+-(
+-	[strAccountID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_THU_USERDATA.sql b/src/schema/BK_THU_USERDATA.sql
+deleted file mode 100644
+index 955d114..0000000
+--- a/src/schema/BK_THU_USERDATA.sql
++++ /dev/null
+@@ -1,28 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_THU_USERDATA](
+-	[strUserID] [char](21) NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL,
+- CONSTRAINT [PK_BK_THU_USERDATA] PRIMARY KEY CLUSTERED 
+-(
+-	[strUserID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_THU_WAREHOUSE.sql b/src/schema/BK_THU_WAREHOUSE.sql
+deleted file mode 100644
+index cb1d131..0000000
+--- a/src/schema/BK_THU_WAREHOUSE.sql
++++ /dev/null
+@@ -1,14 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_THU_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[warehouseData] [varchar](1600) NULL,
+- CONSTRAINT [PK_BK_THU_WAREHOUSE] PRIMARY KEY CLUSTERED 
+-(
+-	[strAccountID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_TUE_USERDATA.sql b/src/schema/BK_TUE_USERDATA.sql
+deleted file mode 100644
+index 82a8e9e..0000000
+--- a/src/schema/BK_TUE_USERDATA.sql
++++ /dev/null
+@@ -1,28 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_TUE_USERDATA](
+-	[strUserID] [char](21) NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL,
+- CONSTRAINT [PK_BK_TUE_USERDATA] PRIMARY KEY CLUSTERED 
+-(
+-	[strUserID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_TUE_WAREHOUSE.sql b/src/schema/BK_TUE_WAREHOUSE.sql
+deleted file mode 100644
+index b3c15ab..0000000
+--- a/src/schema/BK_TUE_WAREHOUSE.sql
++++ /dev/null
+@@ -1,14 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_TUE_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[warehouseData] [varchar](1600) NULL,
+- CONSTRAINT [PK_BK_TUE_WAREHOUSE] PRIMARY KEY CLUSTERED 
+-(
+-	[strAccountID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_WED_USERDATA.sql b/src/schema/BK_WED_USERDATA.sql
+deleted file mode 100644
+index c4728c2..0000000
+--- a/src/schema/BK_WED_USERDATA.sql
++++ /dev/null
+@@ -1,28 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_WED_USERDATA](
+-	[strUserID] [char](21) NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL,
+- CONSTRAINT [PK_BK_WED_USERDATA] PRIMARY KEY CLUSTERED 
+-(
+-	[strUserID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BK_WED_WAREHOUSE.sql b/src/schema/BK_WED_WAREHOUSE.sql
+deleted file mode 100644
+index 4bde604..0000000
+--- a/src/schema/BK_WED_WAREHOUSE.sql
++++ /dev/null
+@@ -1,14 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BK_WED_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[warehouseData] [varchar](1600) NULL,
+- CONSTRAINT [PK_BK_WED_WAREHOUSE] PRIMARY KEY CLUSTERED 
+-(
+-	[strAccountID] ASC
+-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BLOCKED_USERDATA.sql b/src/schema/BLOCKED_USERDATA.sql
+deleted file mode 100644
+index 052c941..0000000
+--- a/src/schema/BLOCKED_USERDATA.sql
++++ /dev/null
+@@ -1,39 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BLOCKED_USERDATA](
+-	[strUserId] [char](21) NOT NULL,
+-	[Nation] [tinyint] NOT NULL,
+-	[Race] [tinyint] NOT NULL,
+-	[Class] [smallint] NOT NULL,
+-	[HairColor] [tinyint] NOT NULL,
+-	[Rank] [tinyint] NOT NULL,
+-	[Title] [tinyint] NOT NULL,
+-	[Level] [tinyint] NOT NULL,
+-	[Exp] [int] NOT NULL,
+-	[Loyalty] [int] NOT NULL,
+-	[Face] [tinyint] NOT NULL,
+-	[City] [tinyint] NOT NULL,
+-	[Knights] [smallint] NOT NULL,
+-	[Fame] [tinyint] NOT NULL,
+-	[Hp] [smallint] NOT NULL,
+-	[Mp] [smallint] NOT NULL,
+-	[Sp] [smallint] NOT NULL,
+-	[Strong] [tinyint] NOT NULL,
+-	[Sta] [tinyint] NOT NULL,
+-	[Dex] [tinyint] NOT NULL,
+-	[Intel] [tinyint] NOT NULL,
+-	[Cha] [tinyint] NOT NULL,
+-	[Authority] [tinyint] NOT NULL,
+-	[Points] [tinyint] NOT NULL,
+-	[Gold] [int] NOT NULL,
+-	[Zone] [tinyint] NOT NULL,
+-	[Bind] [smallint] NULL,
+-	[PX] [int] NOT NULL,
+-	[PZ] [int] NOT NULL,
+-	[PY] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [varchar](400) NULL
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/BLOCKED_WAREHOUSE.sql b/src/schema/BLOCKED_WAREHOUSE.sql
+deleted file mode 100644
+index 89a83cd..0000000
+--- a/src/schema/BLOCKED_WAREHOUSE.sql
++++ /dev/null
+@@ -1,10 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[BLOCKED_WAREHOUSE](
+-	[strAccountID] [char](21) NOT NULL,
+-	[nMoney] [int] NOT NULL,
+-	[WarehouseData] [varchar](1600) NULL
+-) ON [PRIMARY]
+-GO
+diff --git a/src/schema/K_NPCPOS_BACK.sql b/src/schema/K_NPCPOS_BACK.sql
+deleted file mode 100644
+index 2d9af56..0000000
+--- a/src/schema/K_NPCPOS_BACK.sql
++++ /dev/null
+@@ -1,18 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[K_NPCPOS_BACK](
+-	[ZoneID] [smallint] NOT NULL,
+-	[NpcID] [int] NOT NULL,
+-	[ActType] [tinyint] NOT NULL,
+-	[LeftX] [int] NOT NULL,
+-	[TopZ] [int] NOT NULL,
+-	[RightX] [int] NOT NULL,
+-	[BottomZ] [int] NOT NULL,
+-	[NumNPC] [tinyint] NOT NULL,
+-	[RegTime] [smallint] NOT NULL,
+-	[DotCnt] [tinyint] NOT NULL,
+-	[path] [text] NULL
+-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+-GO
+diff --git a/src/schema/K_NPCPOS_SORT.sql b/src/schema/K_NPCPOS_SORT.sql
+deleted file mode 100644
+index a35f80a..0000000
+--- a/src/schema/K_NPCPOS_SORT.sql
++++ /dev/null
+@@ -1,18 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[K_NPCPOS_SORT](
+-	[ZoneID] [smallint] NOT NULL,
+-	[NpcID] [int] NOT NULL,
+-	[ActType] [tinyint] NOT NULL,
+-	[LeftX] [int] NOT NULL,
+-	[TopZ] [int] NOT NULL,
+-	[RightX] [int] NOT NULL,
+-	[BottomZ] [int] NOT NULL,
+-	[NumNPC] [tinyint] NOT NULL,
+-	[RegTime] [smallint] NOT NULL,
+-	[DotCnt] [tinyint] NOT NULL,
+-	[path] [text] NULL
+-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+-GO
+diff --git a/src/schema/MONSTER_ITEM_TEST.sql b/src/schema/MONSTER_ITEM_TEST.sql
+deleted file mode 100644
+index 591a940..0000000
+--- a/src/schema/MONSTER_ITEM_TEST.sql
++++ /dev/null
+@@ -1,18 +0,0 @@
+-﻿SET ANSI_NULLS ON
+-GO
+-SET QUOTED_IDENTIFIER ON
+-GO
+-CREATE TABLE [dbo].[MONSTER_ITEM_TEST](
+-	[sIndex] [smallint] NOT NULL,
+-	[iItem01] [int] NULL,
+-	[sPersent01] [smallint] NULL,
+-	[iItem02] [int] NULL,
+-	[sPersent02] [smallint] NULL,
+-	[iItem03] [int] NULL,
+-	[sPersent03] [smallint] NULL,
+-	[iItem04] [int] NULL,
+-	[sPersent04] [smallint] NULL,
+-	[iItem05] [int] NULL,
+-	[sPersent05] [smallint] NULL
+-) ON [PRIMARY]
+-GO

@@ -1,0 +1,21 @@
+diff --git a/src/schema/DELETED_USERDATA.sql b/src/schema/DELETED_USERDATA.sql
+index e7c65d7..54dc587 100644
+--- a/src/schema/DELETED_USERDATA.sql
++++ b/src/schema/DELETED_USERDATA.sql
+@@ -32,10 +32,12 @@ CREATE TABLE [dbo].[DELETED_USERDATA](
+ 	[Zone] [tinyint] NOT NULL,
+ 	[Bind] [smallint] NULL,
+ 	[PX] [int] NOT NULL,
+-	[PZ] [int] NULL,
+-	[PY] [int] NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [binary](400) NULL,
++	[PZ] [int] NOT NULL,
++	[PY] [int] NOT NULL,
++	[dwTime] [int] NOT NULL,
++	[bySkill] [binary](10) NULL,
++	[byItem] [binary](400) NULL,
++	[bySerial] [binary](400) NULL,
+ 	[DeletedTime] [smalldatetime] NOT NULL
+ ) ON [PRIMARY]
+ GO

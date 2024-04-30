@@ -1,0 +1,13 @@
+diff --git a/src/procedure/LOAD_CHAR_INFO.sql b/src/procedure/LOAD_CHAR_INFO.sql
+index 84cd4f0..6e70027 100644
+--- a/src/procedure/LOAD_CHAR_INFO.sql
++++ b/src/procedure/LOAD_CHAR_INFO.sql
+@@ -21,7 +21,7 @@ IF @nRet = 0
+     [Level],
+     Face,
+     Zone,
+-    strItem
++    byItem
+   FROM USERDATA WHERE strUserID = @CharId
+ 
+ SET @nRet = 1

@@ -1,0 +1,32 @@
+diff --git a/src/procedure/NATION_SELECT.sql b/src/procedure/NATION_SELECT.sql
+index 3590cb4..1029c85 100644
+--- a/src/procedure/NATION_SELECT.sql
++++ b/src/procedure/NATION_SELECT.sql
+@@ -1,23 +1,17 @@
+-﻿SET ANSI_NULLS OFF
++﻿SET ANSI_NULLS ON
+ GO
+-SET QUOTED_IDENTIFIER ON
++SET QUOTED_IDENTIFIER OFF
+ GO
++
+ CREATE PROCEDURE [dbo].[NATION_SELECT]
+   @nRet smallint OUTPUT,
+   @AccountID char(21),
+   @Nation tinyint
+ AS
+ 
+-DECLARE @Row tinyint
++DECLARE @Row tinyint, @CharNum smallint
+ SET @Row = 0
+ 
+-SELECT @Row = COUNT(*) FROM ACCOUNT_CHAR WHERE strAccountID = @AccountID
+-IF @Row > 0
+-  BEGIN
+-    SET @nRet = -1
+-    RETURN
+-  END
+-
+ BEGIN TRAN
+ 
+ SELECT @Row = COUNT(*) FROM ACCOUNT_CHAR WHERE strAccountID = @AccountID

@@ -1,0 +1,26 @@
+diff --git a/src/procedure/ACCOUNT_LOGIN.sql b/src/procedure/ACCOUNT_LOGIN.sql
+index 04960ef..05875ba 100644
+--- a/src/procedure/ACCOUNT_LOGIN.sql
++++ b/src/procedure/ACCOUNT_LOGIN.sql
+@@ -1,6 +1,6 @@
+-﻿SET ANSI_NULLS OFF
++﻿SET ANSI_NULLS ON
+ GO
+-SET QUOTED_IDENTIFIER ON
++SET QUOTED_IDENTIFIER OFF
+ GO
+ CREATE PROCEDURE [dbo].[ACCOUNT_LOGIN]
+   @AccountID varchar(21),
+@@ -16,7 +16,11 @@ SET @pwd = NULL
+ SELECT @pwd = strPasswd FROM [dbo].[TB_USER] WHERE strAccountID = @AccountID
+ IF @pwd IS NULL
+   BEGIN
+-    SET @nRet = 2
++    BEGIN TRAN
++    INSERT INTO TB_USER (strAccountID, strPasswd, strSocNo)
++    VALUES (@AccountID, @Password, 1)
++    COMMIT TRAN
++    SET @nRet = 1
+     RETURN
+   END
+ 

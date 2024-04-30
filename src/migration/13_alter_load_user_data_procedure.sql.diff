@@ -1,0 +1,17 @@
+diff --git a/src/procedure/LOAD_USER_DATA.sql b/src/procedure/LOAD_USER_DATA.sql
+index 4a33232..11a266e 100644
+--- a/src/procedure/LOAD_USER_DATA.sql
++++ b/src/procedure/LOAD_USER_DATA.sql
+@@ -46,9 +46,9 @@ IF @nRet = 0
+     PZ,
+     PY,
+     dwTime,
+-    strSkill,
+-    strItem,
+-    strSerial
++    bySkill,
++    byItem,
++    bySerial
+   FROM USERDATA WHERE strUserId = @id
+ 
+ SET @nRet = 1

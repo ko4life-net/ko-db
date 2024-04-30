@@ -1,0 +1,12 @@
+diff --git a/src/procedure/LOAD_CHAR_INFO.sql b/src/procedure/LOAD_CHAR_INFO.sql
+index 289d4cb..84cd4f0 100644
+--- a/src/procedure/LOAD_CHAR_INFO.sql
++++ b/src/procedure/LOAD_CHAR_INFO.sql
+@@ -20,6 +20,7 @@ IF @nRet = 0
+     HairColor,
+     [Level],
+     Face,
++    Zone,
+     strItem
+   FROM USERDATA WHERE strUserID = @CharId
+ 

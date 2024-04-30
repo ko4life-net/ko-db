@@ -1,0 +1,23 @@
+diff --git a/src/schema/USERDATA.sql b/src/schema/USERDATA.sql
+index 9b40bd9..53d47b4 100644
+--- a/src/schema/USERDATA.sql
++++ b/src/schema/USERDATA.sql
+@@ -34,9 +34,9 @@ CREATE TABLE [dbo].[USERDATA](
+ 	[PZ] [int] NOT NULL,
+ 	[PY] [int] NOT NULL,
+ 	[dwTime] [int] NOT NULL,
+-	[strSkill] [varchar](10) NULL,
+-	[strItem] [binary](400) NULL,
+-	[strSerial] [binary](400) NULL,
++	[bySkill] [binary](10) NULL,
++	[byItem] [binary](400) NULL,
++	[bySerial] [binary](400) NULL,
+  CONSTRAINT [PK_USERDATA] PRIMARY KEY CLUSTERED 
+ (
+ 	[strUserId] ASC
+@@ -106,5 +106,3 @@ ALTER TABLE [dbo].[USERDATA] ADD  CONSTRAINT [DF_USERDATA_PY]  DEFAULT ((0)) FOR
+ GO
+ ALTER TABLE [dbo].[USERDATA] ADD  CONSTRAINT [DF_USERDATA_dwTime]  DEFAULT ((0)) FOR [dwTime]
+ GO
+-ALTER TABLE [dbo].[USERDATA] ADD  CONSTRAINT [DF_USERDATA_strSkill]  DEFAULT (0x00) FOR [strSkill]
+-GO
