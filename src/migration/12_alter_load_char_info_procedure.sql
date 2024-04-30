@@ -2,6 +2,8 @@ SET ANSI_NULLS OFF
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+-- Scripted by Samma
+-- 2002.01.18
 
 ALTER PROCEDURE [dbo].[LOAD_CHAR_INFO]
   @CharId char(21),
@@ -19,7 +21,7 @@ IF @nRet = 0
     [Level],
     Face,
     Zone,
-    bItem
+    byItem
   FROM USERDATA WHERE strUserID = @CharId
 
 SET @nRet = 1

@@ -46,9 +46,9 @@ IF @nRet = 0
     PZ,
     PY,
     dwTime,
-    bSkill,
-    bItem,
-    bSerial
+    bySkill,
+    byItem,
+    bySerial
   FROM USERDATA WHERE strUserId = @id
 
 SET @nRet = 1
