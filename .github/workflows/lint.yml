@@ -1,0 +1,32 @@
+name: PR Checks
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+    types: [opened, push, ready_for_review]
+  workflow_dispatch:
+
+jobs:
+  pr-checks:
+    name: Check lint
+    runs-on: windows-latest
+    if: github.event.pull_request.draft == false
+
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@v3
+
+      - name: Install deps
+        run: |
+          pip install sqlfluff==2.3.5
+
+      - name: Check lint
+        run: |
+          & .\format.ps1
+          $git_diff = (git diff --stat -- "*.sql")
+          if ($git_diff -ne $null) {
+              Write-Host "Code formatting issues found! Please run the format.ps1 script, commit the changes and push."
+              git diff --stat -- "*.sql"
+              exit 1
+          }
