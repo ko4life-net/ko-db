@@ -29,7 +29,7 @@ Note that the development process is inspired from [different db development env
 
 During development we only create migration scripts to alter the current state of the base. The base here refers to the generated scripts in data, procedure and schema.
 
-Every migration script will be prefixed by index. For example, `1_insert_steve_user.sql` will contain an insert statement to `TB_USER` table.
+Every migration script will be prefixed by max 4 leading zeros. For example, `0001_insert_steve_user.sql` will contain an insert statement to `TB_USER` table.
 
 Apart from the benifit of having the database under version control, this also makes it easy to use any SQL version you want. I use both 2008 and 2022 and it works perfectly fine with both.
 

@@ -3,12 +3,10 @@
 Add here scripts that alters the existing database's schema, procedures, data and misc changes.
 
 Couple of rules and notes when writing migration scripts:
-- Try to avoid any unnecessary formatting (eventually we'll add a formatter and automation), as it bloats the final diff when exporting the db
 - Always assume the database containing data, even if you just modify an empty table
-- When altering Stored Procedures, always create a separate script for it
 - When altering the schema, adding comments (`--` for tsql) are encouraged
-- When merging Pull Requests, if the server or client also needs changes, first merge the db PRs before the client / server
-- When submitting a PR, providing a `*.diff` file is encouraged (`.\import.ps1 -generate_diffs $true`)
+- When submitting a PR, please generate a `*.diff` file and commit it (`.\import.ps1 -generate_diffs $true`)
+- Every migration script should start with max 4 leading zeros (example `0001_insert_user.sql`)
 
 ## Creating a new release
 
