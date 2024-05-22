@@ -1,7 +1,7 @@
 # Check the .sqlfluff config file for more info
 param (
-    [bool][Parameter(Mandatory = $false)]
-    $verbose_output = $false
+    [switch][Parameter(Mandatory = $false)]
+    $verbose_output
 )
 
 $dirs_to_format = @(

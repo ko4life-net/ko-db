@@ -6,18 +6,20 @@
 param (
     # change server_name if you installed your sql server as a Named Instance.
     # If you installed on the Default Instance, then you can leave this as-is.
+    # If you're still not sure what is your sql server names, you can run the following powershell command:
+    # (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
     [string][Parameter(Mandatory = $false)]
     $server_name = "localhost",
 
     [string][Parameter(Mandatory = $false)]
     $db_name = "kodb",
 
+    # skip code formatting and linting
+    [switch][Parameter(Mandatory = $false)]
+    $skip_format,
 
-    [bool][Parameter(Mandatory = $false)]
-    $apply_format = $true,
-
-    [bool][Parameter(Mandatory = $false)]
-    $quiet = $false
+    [switch][Parameter(Mandatory = $false)]
+    $quiet
 )
 
 . "$PSScriptRoot\logger.ps1"
@@ -95,7 +97,7 @@ function Main {
 
   Remove-Item tmp -Recurse
 
-  if ($apply_format) {
+  if (-not $skip_format) {
     # Note that we intentionally don't format schema and data, because they're not written
     # by the user and also because it takes a while to format big data.
     sqlfluff format `

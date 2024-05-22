@@ -7,23 +7,24 @@
 param (
     # change server_name if you installed your sql server as a Named Instance.
     # If you installed on the Default Instance, then you can leave this as-is.
+    # If you're still not sure what is your sql server names, you can run the following powershell command:
+    # (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
     [string][Parameter(Mandatory = $false)]
     $server_name = "localhost",
 
     [string][Parameter(Mandatory = $false)]
     $db_name = "kodb",
 
-    # Set this flag to false if you want to skip migration scripts
-    [bool][Parameter(Mandatory = $false)]
-    $run_migration_scripts = $true,
+    [switch][Parameter(Mandatory = $false)]
+    $skip_migration_scripts,
 
-    # Set this flag to true if you're creating a db release or want to see the current diffs of each migration script
+    # Generate diffs for each migration script that is not archived.
     # Warning: make sure to commit your changes before running the script with this enabled, or you may lose work
-    [bool][Parameter(Mandatory = $false)]
-    $generate_diffs = $false,
+    [switch][Parameter(Mandatory = $false)]
+    $generate_diffs,
 
-    [bool][Parameter(Mandatory = $false)]
-    $quiet = $false
+    [switch][Parameter(Mandatory = $false)]
+    $quiet
 )
 
 . "$PSScriptRoot\logger.ps1"
@@ -114,7 +115,7 @@ function RunMigrationScriptsAndGenerateDiffs {
   foreach ($script In $scripts) {
     Message $script.FullName
     InvokeSqlScript -script_path $script.FullName
-    .\export.ps1 -server_name $server_name -db_name $db_name -apply_format $false -quiet $true
+    .\export.ps1 -server_name $server_name -db_name $db_name -skip_format -quiet
     git add $targetDirs
     $diffOutputFile = $script.FullName + ".diff"
     # Note that powershell messes up with the output and corrupts the patch, hence we use cmd here.
@@ -147,14 +148,14 @@ function Main {
   RecreateDb -server_instance $server
   RunInitialDbScripts
 
-  if ($run_migration_scripts) {
+  if ($skip_migration_scripts) {
+    MessageInfo "Skipping migration scripts..."
+  } else {
     if ($generate_diffs) {
       RunMigrationScriptsAndGenerateDiffs
     } else {
       RunMigrationScripts
     }
-  } else {
-    MessageInfo "Skipping migration scripts..."
   }
 
   CreateDbCredentials

@@ -5,7 +5,7 @@ Add here scripts that alters the existing database's schema, procedures, data an
 Couple of rules and notes when writing migration scripts:
 - Always assume the database containing data, even if you just modify an empty table
 - When altering the schema, adding comments (`--` for tsql) are encouraged
-- When submitting a PR, please generate a `*.diff` file and commit it (`.\import.ps1 -generate_diffs $true`)
+- When submitting a PR, please generate a `*.diff` file and commit it (`.\import.ps1 -generate_diffs`)
 - Every migration script should start with max 4 leading zeros (example `0001_insert_user.sql`)
 
 ## Creating a new release
@@ -16,7 +16,7 @@ Below are instructions for the release engineer in order to create a new db rele
 - Run the export script, to be sure that no diff is produced (`.\export.ps1` and then `git status`)
   - If there are local changes, something is probably off. Repeat the steps above
   - If you're sure all in order, best is if you create a new separate PR with the changes, in case empty spaces and such were added
-- Run the import script again with the migration scripts and produce diffs (`.\import.ps1 -generate_diffs $true`)
+- Run the import script again with the migration scripts and produce diffs (`.\import.ps1 -generate_diffs`)
 - Move all migration scripts and its `*.diff` files to the `archived` directory
 - Lastly run the export script once more, but this time you'll have the actual changes from the migration scripts affecting the actual schema
 - Git commit all the changes (`Bump version from 1.0.0 to 1.0.1.`)
