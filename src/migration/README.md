@@ -21,7 +21,7 @@ Below are instructions for the release engineer in order to create a new db rele
 - Run the import script again with the migration scripts and produce diffs (`.\import.ps1 -generate_diffs $true`)
 - Move all migration scripts and its `*.diff` files to the `archived` directory
 - Lastly run the export script once more, but this time you'll have the actual changes from the migration scripts affecting the actual schema
-- Git commit all the changes (`Bump version from 1.0.0 to 1.0.1`)
+- Git commit all the changes (`Bump version from 1.0.0 to 1.0.1.`)
   - Check the final diff that all looks in order
 - Create a PR and merge after approval
 - After merging, create a new release using GitHub web interface and add description to the release highlighting the important changes

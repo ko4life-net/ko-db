@@ -22,7 +22,7 @@ IF @nRet = 0
     Face,
     Zone,
     byItem
-  FROM USERDATA WHERE strUserID = @CharId
+  FROM USERDATA WHERE strUserId = @CharId
 
 SET @nRet = 1
 RETURN

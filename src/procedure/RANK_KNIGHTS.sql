@@ -17,13 +17,13 @@ SELECT IDNum FROM KNIGHTS
 OPEN job1
 FETCH NEXT FROM job1
 INTO @KnightsIndex
-WHILE @@fetch_status = 0
+WHILE @@FETCH_STATUS = 0
   BEGIN
 
     SET @SumLoyalty = 0
-    SELECT @SumLoyalty = SUM(Loyalty) FROM USERDATA WHERE Knights = @Knightsindex
+    SELECT @SumLoyalty = SUM(Loyalty) FROM USERDATA WHERE Knights = @KnightsIndex
     IF @SumLoyalty != 0
-      UPDATE KNIGHTS SET Points = @SumLoyalty WHERE IDNum = @knightsindex
+      UPDATE KNIGHTS SET Points = @SumLoyalty WHERE IDNum = @KnightsIndex
 
     FETCH NEXT FROM job1
     INTO @KnightsIndex

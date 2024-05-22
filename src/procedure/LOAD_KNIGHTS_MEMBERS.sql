@@ -7,7 +7,7 @@ GO
 -- 2002.09.26
 
 CREATE PROCEDURE [dbo].[LOAD_KNIGHTS_MEMBERS]
-  @knightsindex smallint
+  @KnightsIndex smallint
 AS
 
 SELECT
@@ -15,7 +15,7 @@ SELECT
   Fame,
   [Level],
   [Class]
-FROM USERDATA WHERE Knights = @knightsindex
+FROM USERDATA WHERE Knights = @KnightsIndex
 
 --SET @nRet = 1
 --RETURN
