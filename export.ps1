@@ -6,8 +6,6 @@
 param (
     # change server_name if you installed your sql server as a Named Instance.
     # If you installed on the Default Instance, then you can leave this as-is.
-    # If you're still not sure what is your sql server names, you can run the following powershell command:
-    # (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
     [string][Parameter(Mandatory = $false)]
     $server_name = "localhost",
 
