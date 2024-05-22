@@ -104,7 +104,7 @@ function Main {
       "$PSScriptRoot\src\procedure\"
   }
 
-  MessageSuccess "Successfully exported [$db_name] database from [$server_name] SQL server."
+  MessageSuccess "Successfully exported [$db_name] database from [$server_name] SQL server!"
 }
 
 Main

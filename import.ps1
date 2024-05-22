@@ -16,6 +16,9 @@ param (
     [switch][Parameter(Mandatory = $false)]
     $skip_migration_scripts,
 
+    [switch][Parameter(Mandatory = $false)]
+    $skip_odbc_creation,
+
     # Generate diffs for each migration script that is not archived.
     # Warning: make sure to commit your changes before running the script with this enabled, or you may lose work
     [switch][Parameter(Mandatory = $false)]
@@ -156,6 +159,13 @@ function Main {
   }
 
   CreateDbCredentials
+
+  if (-not $skip_odbc_creation) {
+    MessageInfo "Creating odbc configurations..."
+    .\odbcad.ps1 -server_name $server_name -quiet
+  }
+
+  MessageSuccess "Successfully imported [$db_name] database into [$server_name] SQL server!"
 }
 
 Main
