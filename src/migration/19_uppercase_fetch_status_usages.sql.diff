@@ -1,0 +1,52 @@
+diff --git a/src/procedure/CHECK_KNIGHTS.sql b/src/procedure/CHECK_KNIGHTS.sql
+index 0aa8e87..17b848e 100644
+--- a/src/procedure/CHECK_KNIGHTS.sql
++++ b/src/procedure/CHECK_KNIGHTS.sql
+@@ -15,7 +15,7 @@ SELECT IDNum FROM KNIGHTS
+ OPEN job1
+ FETCH NEXT FROM job1
+ INTO @KnightsIndex
+-WHILE @@fetch_status = 0
++WHILE @@FETCH_STATUS = 0
+   BEGIN
+     DECLARE @ROW int
+ 
+diff --git a/src/procedure/EDITER_KNIGHTS.sql b/src/procedure/EDITER_KNIGHTS.sql
+index 47591fa..8e39e78 100644
+--- a/src/procedure/EDITER_KNIGHTS.sql
++++ b/src/procedure/EDITER_KNIGHTS.sql
+@@ -17,7 +17,7 @@ SELECT IDNum FROM KNIGHTS
+ OPEN job1
+ FETCH NEXT FROM job1
+ INTO @KnightsIndex
+-WHILE @@fetch_status = 0
++WHILE @@FETCH_STATUS = 0
+   BEGIN
+     DECLARE @LEVEL int
+     DECLARE @ROW int
+diff --git a/src/procedure/EXEC_KNIGHTS_USER.sql b/src/procedure/EXEC_KNIGHTS_USER.sql
+index 36bd632..9ec3ecf 100644
+--- a/src/procedure/EXEC_KNIGHTS_USER.sql
++++ b/src/procedure/EXEC_KNIGHTS_USER.sql
+@@ -21,7 +21,7 @@ FROM USERDATA
+ OPEN job1
+ FETCH NEXT FROM job1
+ INTO @strUserId, @KnightsIndex
+-WHILE @@fetch_status = 0
++WHILE @@FETCH_STATUS = 0
+   BEGIN
+     IF @KnightsIndex != 0
+       BEGIN
+diff --git a/src/procedure/RANK_KNIGHTS.sql b/src/procedure/RANK_KNIGHTS.sql
+index 019388f..77f8fc1 100644
+--- a/src/procedure/RANK_KNIGHTS.sql
++++ b/src/procedure/RANK_KNIGHTS.sql
+@@ -17,7 +17,7 @@ SELECT IDNum FROM KNIGHTS
+ OPEN job1
+ FETCH NEXT FROM job1
+ INTO @KnightsIndex
+-WHILE @@fetch_status = 0
++WHILE @@FETCH_STATUS = 0
+   BEGIN
+ 
+     SET @SumLoyalty = 0
