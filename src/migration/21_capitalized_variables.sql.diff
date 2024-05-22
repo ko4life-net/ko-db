@@ -1,0 +1,96 @@
+diff --git a/src/procedure/CREATE_KNIGHTS.sql b/src/procedure/CREATE_KNIGHTS.sql
+index d790cbf..cfed379 100644
+--- a/src/procedure/CREATE_KNIGHTS.sql
++++ b/src/procedure/CREATE_KNIGHTS.sql
+@@ -4,18 +4,16 @@ SET QUOTED_IDENTIFIER ON
+ GO
+ 
+ CREATE PROCEDURE [dbo].[CREATE_KNIGHTS]
+-
+   @nRet smallint OUTPUT,
+   @index smallint,
+   @nation tinyint,
+   @community tinyint,
+   @strName char(21),
+   @strChief char(21)
+-
+ AS
+ 
+-DECLARE @Row tinyint, @knightsindex smallint, @knightsname char(21)
+-SET @Row = 0 SET @knightsindex = 0 SET @knightsname = ''
++DECLARE @Row tinyint, @KnightsIndex smallint, @KnightsName char(21)
++SET @Row = 0 SET @KnightsIndex = 0 SET @KnightsName = ''
+ 
+ SELECT @Row = COUNT(*) FROM KNIGHTS WHERE IDNum = @index OR IDName = @strName
+ 
+diff --git a/src/procedure/DELETE_CHAR.sql b/src/procedure/DELETE_CHAR.sql
+index 45b8554..ed6fae9 100644
+--- a/src/procedure/DELETE_CHAR.sql
++++ b/src/procedure/DELETE_CHAR.sql
+@@ -18,9 +18,9 @@ DECLARE
+   @charid4 char(21),
+   @charid5 char(21),
+   @strSocNo char(15)
+-DECLARE @knightsindex smallint
++DECLARE @KnightsIndex smallint
+ SET @bCharNum = 0
+-SET @knightsindex = 0
++SET @KnightsIndex = 0
+ 
+ SELECT @strSocNo = strSocNo FROM [dbo].[TB_USER] WHERE strAccountID = @AccountID
+ IF @SocNo != @strSocNo
+diff --git a/src/procedure/DELETE_KNIGHTS.sql b/src/procedure/DELETE_KNIGHTS.sql
+index b61f48d..9a36017 100644
+--- a/src/procedure/DELETE_KNIGHTS.sql
++++ b/src/procedure/DELETE_KNIGHTS.sql
+@@ -6,7 +6,7 @@ GO
+ 
+ CREATE PROCEDURE [dbo].[DELETE_KNIGHTS]
+   @nRet smallint OUTPUT,
+-  @knightsindex smallint
++  @KnightsIndex smallint
+ AS
+ 
+ DECLARE @Row tinyint, @Knights smallint, @Fame tinyint, @UserID char(21)
+@@ -14,7 +14,7 @@ SET @Row = 0 SET @Knights = 0 SET @Fame = 0 SET @UserID = ''
+ 
+ 
+ 
+-SELECT @Row = COUNT(*) FROM KNIGHTS WHERE IDNum = @knightsindex
++SELECT @Row = COUNT(*) FROM KNIGHTS WHERE IDNum = @KnightsIndex
+ IF @Row = 0
+   BEGIN
+     SET @nRet = 7
+@@ -23,8 +23,8 @@ IF @Row = 0
+ 
+ BEGIN TRAN
+ 
+-DELETE FROM KNIGHTS WHERE IDNum = @knightsindex
+-DELETE FROM KNIGHTS_USER WHERE sIDNum = @knightsindex
++DELETE FROM KNIGHTS WHERE IDNum = @KnightsIndex
++DELETE FROM KNIGHTS_USER WHERE sIDNum = @KnightsIndex
+ 
+ IF @@ERROR != 0
+   BEGIN
+diff --git a/src/procedure/LOAD_KNIGHTS_MEMBERS.sql b/src/procedure/LOAD_KNIGHTS_MEMBERS.sql
+index c6ccd7c..4c7695f 100644
+--- a/src/procedure/LOAD_KNIGHTS_MEMBERS.sql
++++ b/src/procedure/LOAD_KNIGHTS_MEMBERS.sql
+@@ -7,7 +7,7 @@ GO
+ -- 2002.09.26
+ 
+ CREATE PROCEDURE [dbo].[LOAD_KNIGHTS_MEMBERS]
+-  @knightsindex smallint
++  @KnightsIndex smallint
+ AS
+ 
+ SELECT
+@@ -15,7 +15,7 @@ SELECT
+   Fame,
+   [Level],
+   [Class]
+-FROM USERDATA WHERE Knights = @knightsindex
++FROM USERDATA WHERE Knights = @KnightsIndex
+ 
+ --SET @nRet = 1
+ --RETURN
