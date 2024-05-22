@@ -1,0 +1,166 @@
+diff --git a/src/procedure/CHECK_KNIGHTS.sql b/src/procedure/CHECK_KNIGHTS.sql
+index 127d07e..0aa8e87 100644
+--- a/src/procedure/CHECK_KNIGHTS.sql
++++ b/src/procedure/CHECK_KNIGHTS.sql
+@@ -23,7 +23,7 @@ WHILE @@fetch_status = 0
+     IF @ROW = 1
+       BEGIN
+         BEGIN TRAN
+-        DELETE FROM KNIGHTS WHERE IDNum = @knightsindex
++        DELETE FROM KNIGHTS WHERE IDNum = @KnightsIndex
+ 
+         IF @@ERROR != 0
+           BEGIN
+@@ -31,7 +31,7 @@ WHILE @@fetch_status = 0
+           END
+         ELSE
+           BEGIN
+-            UPDATE USERDATA SET Knights = 0, Fame = 0 WHERE Knights = @knightsindex
++            UPDATE USERDATA SET Knights = 0, Fame = 0 WHERE Knights = @KnightsIndex
+             DELETE FROM KNIGHTS_USER WHERE [sIDNum] = @KnightsIndex
+           END
+         COMMIT TRAN
+diff --git a/src/procedure/DELETE_CHAR.sql b/src/procedure/DELETE_CHAR.sql
+index 59b29c6..45b8554 100644
+--- a/src/procedure/DELETE_CHAR.sql
++++ b/src/procedure/DELETE_CHAR.sql
+@@ -67,15 +67,15 @@ DECLARE @bySkill binary(10), @byItem binary(400), @bySerial binary(400), @Member
+ BEGIN TRAN
+ 
+ IF @index = 0
+-  UPDATE ACCOUNT_CHAR SET strCHARID1 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
++  UPDATE ACCOUNT_CHAR SET strCharID1 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+ IF @index = 1
+-  UPDATE ACCOUNT_CHAR SET strCHARID2 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
++  UPDATE ACCOUNT_CHAR SET strCharID2 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+ IF @index = 2
+-  UPDATE ACCOUNT_CHAR SET strCHARID3 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
++  UPDATE ACCOUNT_CHAR SET strCharID3 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+ IF @index = 3
+-  UPDATE ACCOUNT_CHAR SET strCHARID4 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
++  UPDATE ACCOUNT_CHAR SET strCharID4 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+ IF @index = 4
+-  UPDATE ACCOUNT_CHAR SET strCHARID5 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
++  UPDATE ACCOUNT_CHAR SET strCharID5 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+ 
+ IF @@ERROR != 0
+   BEGIN
+@@ -85,11 +85,11 @@ IF @@ERROR != 0
+   END
+ 
+ SELECT
+-  @charid1 = strCHARID1,
+-  @charid2 = strCHARID2,
+-  @charid3 = strCHARID3,
+-  @charid4 = strCHARID4,
+-  @charid5 = strCHARID5
++  @charid1 = strCharID1,
++  @charid2 = strCharID2,
++  @charid3 = strCharID3,
++  @charid4 = strCharID4,
++  @charid5 = strCharID5
+ FROM ACCOUNT_CHAR
+ WHERE strAccountID = @AccountID
+ -- 캐릭터가 하나도 없으면 해당 레코드를 지운다.. -> 국가선택 다시 할수 있다
+@@ -142,7 +142,7 @@ FROM USERDATA WHERE strUserId = @CharID
+ 
+ INSERT INTO DELETED_USERDATA (
+   strAccountID,
+-  strUserID,
++  strUserId,
+   Nation,
+   Race,
+   [Class],
+@@ -223,7 +223,7 @@ IF @@ERROR != 0
+     RETURN
+   END
+ 
+-DELETE FROM KNIGHTS_USER WHERE strUserId = @CharID
++DELETE FROM KNIGHTS_USER WHERE strUserID = @CharID
+ SELECT @Members = Members FROM KNIGHTS WHERE IDNum = @Knights
+ IF @Members <= 1
+   UPDATE KNIGHTS SET Members = 1 WHERE IDNum = @Knights
+diff --git a/src/procedure/EDITER_KNIGHTS.sql b/src/procedure/EDITER_KNIGHTS.sql
+index 95c6324..3946216 100644
+--- a/src/procedure/EDITER_KNIGHTS.sql
++++ b/src/procedure/EDITER_KNIGHTS.sql
+@@ -26,11 +26,11 @@ WHILE @@fetch_status = 0
+     SELECT @ROW = COUNT([strUserId]) FROM [USERDATA] WHERE Knights = @KnightsIndex
+     IF @ROW != 0
+       BEGIN
+-        UPDATE KNIGHTS SET [Members] = @Row WHERE IDNum = @KnightsIndex
++        UPDATE KNIGHTS SET [Members] = @ROW WHERE IDNum = @KnightsIndex
+       END
+     ELSE
+       BEGIN
+-        DELETE FROM KNIGHTS WHERE IDNum = @knightsindex
++        DELETE FROM KNIGHTS WHERE IDNum = @KnightsIndex
+       END
+ 
+     FETCH NEXT FROM job1
+diff --git a/src/procedure/EXEC_KNIGHTS_USER.sql b/src/procedure/EXEC_KNIGHTS_USER.sql
+index ba48468..36bd632 100644
+--- a/src/procedure/EXEC_KNIGHTS_USER.sql
++++ b/src/procedure/EXEC_KNIGHTS_USER.sql
+@@ -9,27 +9,27 @@ CREATE PROCEDURE [dbo].[EXEC_KNIGHTS_USER]
+ AS
+ 
+ SET NOCOUNT ON
+-DECLARE @strUserID char(21)
++DECLARE @strUserId char(21)
+ DECLARE @KnightsIndex smallint
+ DECLARE job1 CURSOR FOR
+ 
+ SELECT
+-  strUserID,
++  strUserId,
+   Knights
+ FROM USERDATA
+ 
+ OPEN job1
+ FETCH NEXT FROM job1
+-INTO @strUserID, @KnightsIndex
++INTO @strUserId, @KnightsIndex
+ WHILE @@fetch_status = 0
+   BEGIN
+     IF @KnightsIndex != 0
+       BEGIN
+-        INSERT INTO KNIGHTS_USER (sIDNum, strUserID) VALUES (@KnightsIndex, @strUserID)
++        INSERT INTO KNIGHTS_USER (sIDNum, strUserID) VALUES (@KnightsIndex, @strUserId)
+       END
+ 
+     FETCH NEXT FROM job1
+-    INTO @strUserID, @KnightsIndex
++    INTO @strUserId, @KnightsIndex
+   END
+ CLOSE job1
+ DEALLOCATE job1
+diff --git a/src/procedure/LOAD_CHAR_INFO.sql b/src/procedure/LOAD_CHAR_INFO.sql
+index 6e70027..5e4f795 100644
+--- a/src/procedure/LOAD_CHAR_INFO.sql
++++ b/src/procedure/LOAD_CHAR_INFO.sql
+@@ -22,7 +22,7 @@ IF @nRet = 0
+     Face,
+     Zone,
+     byItem
+-  FROM USERDATA WHERE strUserID = @CharId
++  FROM USERDATA WHERE strUserId = @CharId
+ 
+ SET @nRet = 1
+ RETURN
+diff --git a/src/procedure/RANK_KNIGHTS.sql b/src/procedure/RANK_KNIGHTS.sql
+index 019388f..67d1959 100644
+--- a/src/procedure/RANK_KNIGHTS.sql
++++ b/src/procedure/RANK_KNIGHTS.sql
+@@ -21,9 +21,9 @@ WHILE @@fetch_status = 0
+   BEGIN
+ 
+     SET @SumLoyalty = 0
+-    SELECT @SumLoyalty = SUM(Loyalty) FROM USERDATA WHERE Knights = @Knightsindex
++    SELECT @SumLoyalty = SUM(Loyalty) FROM USERDATA WHERE Knights = @KnightsIndex
+     IF @SumLoyalty != 0
+-      UPDATE KNIGHTS SET Points = @SumLoyalty WHERE IDNum = @knightsindex
++      UPDATE KNIGHTS SET Points = @SumLoyalty WHERE IDNum = @KnightsIndex
+ 
+     FETCH NEXT FROM job1
+     INTO @KnightsIndex
