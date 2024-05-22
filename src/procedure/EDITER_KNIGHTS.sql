@@ -17,7 +17,7 @@ SELECT IDNum FROM KNIGHTS
 OPEN job1
 FETCH NEXT FROM job1
 INTO @KnightsIndex
-WHILE @@fetch_status = 0
+WHILE @@FETCH_STATUS = 0
   BEGIN
     DECLARE @LEVEL int
     DECLARE @ROW int
@@ -30,7 +30,7 @@ WHILE @@fetch_status = 0
       END
     ELSE
       BEGIN
-        DELETE FROM KNIGHTS WHERE IDNum = @knightsindex
+        DELETE FROM KNIGHTS WHERE IDNum = @KnightsIndex
       END
 
     FETCH NEXT FROM job1

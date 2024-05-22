@@ -18,9 +18,9 @@ DECLARE
   @charid4 char(21),
   @charid5 char(21),
   @strSocNo char(15)
-DECLARE @knightsindex smallint
+DECLARE @KnightsIndex smallint
 SET @bCharNum = 0
-SET @knightsindex = 0
+SET @KnightsIndex = 0
 
 SELECT @strSocNo = strSocNo FROM [dbo].[TB_USER] WHERE strAccountID = @AccountID
 IF @SocNo != @strSocNo
@@ -67,15 +67,15 @@ DECLARE @bySkill binary(10), @byItem binary(400), @bySerial binary(400), @Member
 BEGIN TRAN
 
 IF @index = 0
-  UPDATE ACCOUNT_CHAR SET strCHARID1 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+  UPDATE ACCOUNT_CHAR SET strCharID1 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
 IF @index = 1
-  UPDATE ACCOUNT_CHAR SET strCHARID2 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+  UPDATE ACCOUNT_CHAR SET strCharID2 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
 IF @index = 2
-  UPDATE ACCOUNT_CHAR SET strCHARID3 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+  UPDATE ACCOUNT_CHAR SET strCharID3 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
 IF @index = 3
-  UPDATE ACCOUNT_CHAR SET strCHARID4 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+  UPDATE ACCOUNT_CHAR SET strCharID4 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
 IF @index = 4
-  UPDATE ACCOUNT_CHAR SET strCHARID5 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
+  UPDATE ACCOUNT_CHAR SET strCharID5 = NULL, bCharNum = bCharNum - 1 WHERE strAccountID = @AccountID
 
 IF @@ERROR != 0
   BEGIN
@@ -85,11 +85,11 @@ IF @@ERROR != 0
   END
 
 SELECT
-  @charid1 = strCHARID1,
-  @charid2 = strCHARID2,
-  @charid3 = strCHARID3,
-  @charid4 = strCHARID4,
-  @charid5 = strCHARID5
+  @charid1 = strCharID1,
+  @charid2 = strCharID2,
+  @charid3 = strCharID3,
+  @charid4 = strCharID4,
+  @charid5 = strCharID5
 FROM ACCOUNT_CHAR
 WHERE strAccountID = @AccountID
 -- 캐릭터가 하나도 없으면 해당 레코드를 지운다.. -> 국가선택 다시 할수 있다
@@ -142,7 +142,7 @@ FROM USERDATA WHERE strUserId = @CharID
 
 INSERT INTO DELETED_USERDATA (
   strAccountID,
-  strUserID,
+  strUserId,
   Nation,
   Race,
   [Class],
@@ -223,7 +223,7 @@ IF @@ERROR != 0
     RETURN
   END
 
-DELETE FROM KNIGHTS_USER WHERE strUserId = @CharID
+DELETE FROM KNIGHTS_USER WHERE strUserID = @CharID
 SELECT @Members = Members FROM KNIGHTS WHERE IDNum = @Knights
 IF @Members <= 1
   UPDATE KNIGHTS SET Members = 1 WHERE IDNum = @Knights
