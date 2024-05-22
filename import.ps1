@@ -30,6 +30,16 @@ param (
 
 . "$PSScriptRoot\utils.ps1"
 
+function ValidateArgs {
+  if (-not (ValidateServerNameInput $server_name)) {
+    exit_script 1 $quiet
+  }
+
+  if ($skip_migration_scripts -and $generate_diffs) {
+    MessageError "Error: skip_migration_scripts and generate_diffs args are mutually exclusive."
+    exit_script 1 $quiet
+  }
+}
 
 function ConnectToSqlServer {
   [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") > $null
@@ -143,6 +153,8 @@ function Main {
     MessageError "Install-Module sqlserver -AllowClobber -Force"
     exit_script 1 $quiet
   }
+
+  ValidateArgs
 
   $server = ConnectToSqlServer
   RecreateDb -server_instance $server

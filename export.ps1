@@ -22,6 +22,12 @@ param (
 
 . "$PSScriptRoot\utils.ps1"
 
+function ValidateArgs {
+  if (-not (ValidateServerNameInput $server_name)) {
+    exit_script 1 $quiet
+  }
+}
+
 
 function GetFileEncoding($Path) {
   $bytes = [byte[]](Get-Content $Path -Encoding byte -ReadCount 4 -TotalCount 4)
@@ -46,6 +52,8 @@ function Main {
     MessageError "pip install mssql-scripter"
     exit_script 1 $quiet
   }
+
+  ValidateArgs
 
   mssql-scripter `
     -S $server_name `
