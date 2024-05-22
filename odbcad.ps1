@@ -21,7 +21,7 @@ param (
     $quiet
 )
 
-. "$PSScriptRoot\logger.ps1"
+. "$PSScriptRoot\utils.ps1"
 
 function ValidateArgs {
   if ($platform -ne "32" -and $platform -ne "64") {

@@ -20,7 +20,7 @@ param (
     $quiet
 )
 
-. "$PSScriptRoot\logger.ps1"
+. "$PSScriptRoot\utils.ps1"
 
 
 function GetFileEncoding($Path) {
