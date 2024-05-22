@@ -29,8 +29,7 @@ param (
 
 . "$PSScriptRoot\logger.ps1"
 
-# Note that the script will fail if you don't have powershell sqlserver module installed.
-# To install it, run powershell as admin and execute the following command: `Install-Module sqlserver`
+
 function ConnectToSqlServer {
   [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") > $null
   $server = $null
@@ -140,7 +139,7 @@ function Main {
   if (-not (Get-Module -Name sqlserver -ListAvailable)) {
     MessageError "Error: The 'sqlserver' powershell module is not installed."
     MessageError "Please open PowerShell as Administrator and execute the following command to install it:"
-    MessageError "Install-Module -Name sqlserver -Force"
+    MessageError "Install-Module sqlserver -AllowClobber -Force"
     exit 1
   }
 
