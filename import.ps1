@@ -123,7 +123,7 @@ function RunMigrationScriptsAndGenerateDiffs {
     git commit -m $tempUniqueCommitMessage
   }
   # Note that we're intentionally doing it this way, to be sure that we're not deleting commits we shouldn't
-  $commits = git rev-list --grep="$tempUniqueCommitMessage" --reverse HEAD
+  $commits = @(git rev-list --grep="$tempUniqueCommitMessage" --reverse HEAD)
   if ($commits.Count) {
     git reset --hard "$($commits[0])^1"
   }
