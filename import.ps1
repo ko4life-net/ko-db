@@ -76,7 +76,7 @@ function RecreateDb {
   }
 
   MessageInfo "Creating database $db_name..."
-  InvokeSqlQuery -query "USE master; CREATE DATABASE [$db_name];"
+  InvokeSqlQuery -query "USE master; CREATE DATABASE [$db_name] COLLATE SQL_Latin1_General_CP1_CS_AS;"
 }
 
 function RunInitialDbScripts {
