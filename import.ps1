@@ -141,8 +141,11 @@ function RunMigrationScriptsAndGenerateDiffs {
 
 function CreateDbCredentials {
   MessageInfo "`n`n### Creating login and user for $db_name... ###"
-  Message "src/misc/create_login.sql"
-  InvokeSqlScript -script_path "src/misc/create_login.sql"
+  $login_script_file = "src/misc/create_login.sql"
+  Message $login_script_file
+  $output_script_file = Join-Path $env:TEMP "create_login_$(New-Guid).sql"
+  (Get-Content $login_script_file) -replace "###DB_NAME###", $db_name | Out-File $output_script_file
+  InvokeSqlScript -script_path "$output_script_file"
 }
 
 function Main {
