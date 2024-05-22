@@ -26,7 +26,7 @@ param (
 function ValidateArgs {
   if ($platform -ne "32" -and $platform -ne "64") {
     MessageError "Wrong platform argument [$platform]. Choose either 64 or 32."
-    exit 1
+    exit_script 1 $quiet
   }
 
   # MSSQLSERVER instance name indicates it is a Default Instance, which we can connect via localhost or dot,
@@ -45,7 +45,7 @@ function ValidateArgs {
       MessageError "Available sql named instances: [$($sql_instances -join ', ')]"
       MessageError "Example: .\odbcad.ps1 -server_name .\$($sql_instances[-1])"
     }
-    exit 1
+    exit_script 1 $quiet
   }
 }
 
@@ -55,7 +55,7 @@ function SelectSqlDriver {
   $drivers = Get-OdbcDriver | Where-Object { $_.Name -like "*SQL Server*" -and $_.Platform -eq "$platform-bit" }
   if (-not $drivers) {
     MessageWarn "Are you sure SQL Server is installed? I couldn't find any drivers."
-    exit 1
+    exit_script 1 $quiet
   }
 
   $selected_driver = $null
@@ -158,11 +158,9 @@ function Main {
   } else {
     MessageError "Failed to test connection. Check that you first imported the database."
     MessageError "If that didn't work, depending on how you installed MSSQL (Default or Named Instance), you may need to change the server above from localhost to yours."
-    exit 1
+    exit_script 1 $quiet
   }
 }
 
 Main
-if (-not $quiet) {
-  cmd /c 'pause'
-}
+exit_script 0 $quiet

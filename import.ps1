@@ -40,7 +40,7 @@ function ConnectToSqlServer {
     $server.ConnectionContext.Connect()
   } catch {
     Write-Error $_
-    exit 1
+    exit_script 1 $quiet
   }
 
   return $server
@@ -141,7 +141,7 @@ function Main {
     MessageError "Error: The 'sqlserver' powershell module is not installed."
     MessageError "Please open PowerShell as Administrator and execute the following command to install it:"
     MessageError "Install-Module sqlserver -AllowClobber -Force"
-    exit 1
+    exit_script 1 $quiet
   }
 
   $server = ConnectToSqlServer
@@ -169,6 +169,4 @@ function Main {
 }
 
 Main
-if (-not $quiet) {
-  cmd /c 'pause'
-}
+exit_script 0 $quiet

@@ -44,7 +44,7 @@ function Main {
     MessageError "Error: 'mssql-scripter' command is not available."
     MessageError "Please make sure you have Python installed and then run:"
     MessageError "pip install mssql-scripter"
-    exit 1
+    exit_script 1 $quiet
   }
 
   mssql-scripter `
@@ -108,6 +108,4 @@ function Main {
 }
 
 Main
-if (-not $quiet) {
-  cmd /c 'pause'
-}
+exit_script 0 $quiet
