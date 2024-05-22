@@ -4,18 +4,16 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE PROCEDURE [dbo].[CREATE_KNIGHTS]
-
   @nRet smallint OUTPUT,
   @index smallint,
   @nation tinyint,
   @community tinyint,
   @strName char(21),
   @strChief char(21)
-
 AS
 
-DECLARE @Row tinyint, @knightsindex smallint, @knightsname char(21)
-SET @Row = 0 SET @knightsindex = 0 SET @knightsname = ''
+DECLARE @Row tinyint, @KnightsIndex smallint, @KnightsName char(21)
+SET @Row = 0 SET @KnightsIndex = 0 SET @KnightsName = ''
 
 SELECT @Row = COUNT(*) FROM KNIGHTS WHERE IDNum = @index OR IDName = @strName
 

@@ -17,7 +17,7 @@ SELECT IDNum FROM KNIGHTS
 OPEN job1
 FETCH NEXT FROM job1
 INTO @KnightsIndex
-WHILE @@fetch_status = 0
+WHILE @@FETCH_STATUS = 0
   BEGIN
     DECLARE @LEVEL int
     DECLARE @ROW int
@@ -26,11 +26,11 @@ WHILE @@fetch_status = 0
     SELECT @ROW = COUNT([strUserId]) FROM [USERDATA] WHERE Knights = @KnightsIndex
     IF @ROW != 0
       BEGIN
-        UPDATE KNIGHTS SET [Members] = @Row WHERE IDNum = @KnightsIndex
+        UPDATE KNIGHTS SET [Members] = @ROW WHERE IDNum = @KnightsIndex
       END
     ELSE
       BEGIN
-        DELETE FROM KNIGHTS WHERE IDNum = @knightsindex
+        DELETE FROM KNIGHTS WHERE IDNum = @KnightsIndex
       END
 
     FETCH NEXT FROM job1
