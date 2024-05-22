@@ -31,7 +31,9 @@ function ValidateServerNameInput {
     $sql_instances = @($sql_instances | Where-Object { $_ -ne "MSSQLSERVER" })
     if ($sql_instances) {
       MessageError "Available sql named instances: [$($sql_instances -join ', ')]"
-      MessageError "Example: .\odbcad.ps1 -server_name .\$($sql_instances[-1])"
+      $invoker_script_name = ($MyInvocation.PSCommandPath -split "\\")[-1]
+      MessageError "Example: .\$invoker_script_name -server_name "".\$($sql_instances[-1])"""
+      exit 1
     }
     return $false
   }
