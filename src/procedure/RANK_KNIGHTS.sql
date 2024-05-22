@@ -17,7 +17,7 @@ SELECT IDNum FROM KNIGHTS
 OPEN job1
 FETCH NEXT FROM job1
 INTO @KnightsIndex
-WHILE @@fetch_status = 0
+WHILE @@FETCH_STATUS = 0
   BEGIN
 
     SET @SumLoyalty = 0
