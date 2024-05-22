@@ -12,7 +12,7 @@ Couple of rules and notes when writing migration scripts:
 
 Below are instructions for the release engineer in order to create a new db release:
 - Create a new release branch following the db new release version according version semantics (`git checkout -b release/1.0.1`)
-- Run the import script skipping the migration scripts (`.\import.ps1 -run_migration_scripts $false`)
+- Run the import script skipping the migration scripts (`.\import.ps1 -skip_migration_scripts`)
 - Run the export script, to be sure that no diff is produced (`.\export.ps1` and then `git status`)
   - If there are local changes, something is probably off. Repeat the steps above
   - If you're sure all in order, best is if you create a new separate PR with the changes, in case empty spaces and such were added

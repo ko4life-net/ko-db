@@ -7,8 +7,6 @@
 param (
     # change server_name if you installed your sql server as a Named Instance.
     # If you installed on the Default Instance, then you can leave this as-is.
-    # If you're still not sure what is your sql server names, you can run the following powershell command:
-    # (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
     [string][Parameter(Mandatory = $false)]
     $server_name = "localhost",
 
@@ -17,6 +15,9 @@ param (
 
     [switch][Parameter(Mandatory = $false)]
     $skip_migration_scripts,
+
+    [switch][Parameter(Mandatory = $false)]
+    $skip_odbc_creation,
 
     # Generate diffs for each migration script that is not archived.
     # Warning: make sure to commit your changes before running the script with this enabled, or you may lose work
@@ -27,10 +28,19 @@ param (
     $quiet
 )
 
-. "$PSScriptRoot\logger.ps1"
+. "$PSScriptRoot\utils.ps1"
 
-# Note that the script will fail if you don't have powershell sqlserver module installed.
-# To install it, run powershell as admin and execute the following command: `Install-Module sqlserver`
+function ValidateArgs {
+  if (-not (ValidateServerNameInput $server_name)) {
+    exit_script 1 $quiet
+  }
+
+  if ($skip_migration_scripts -and $generate_diffs) {
+    MessageError "Error: skip_migration_scripts and generate_diffs args are mutually exclusive."
+    exit_script 1 $quiet
+  }
+}
+
 function ConnectToSqlServer {
   [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SMO") > $null
   $server = $null
@@ -40,7 +50,7 @@ function ConnectToSqlServer {
     $server.ConnectionContext.Connect()
   } catch {
     Write-Error $_
-    exit 1
+    exit_script 1 $quiet
   }
 
   return $server
@@ -131,8 +141,11 @@ function RunMigrationScriptsAndGenerateDiffs {
 
 function CreateDbCredentials {
   MessageInfo "`n`n### Creating login and user for $db_name... ###"
-  Message "src/misc/create_login.sql"
-  InvokeSqlScript -script_path "src/misc/create_login.sql"
+  $login_script_file = "src/misc/create_login.sql"
+  Message $login_script_file
+  $output_script_file = Join-Path $env:TEMP "create_login_$(New-Guid).sql"
+  (Get-Content $login_script_file) -replace "###DB_NAME###", $db_name | Out-File $output_script_file
+  InvokeSqlScript -script_path "$output_script_file"
 }
 
 function Main {
@@ -140,9 +153,11 @@ function Main {
   if (-not (Get-Module -Name sqlserver -ListAvailable)) {
     MessageError "Error: The 'sqlserver' powershell module is not installed."
     MessageError "Please open PowerShell as Administrator and execute the following command to install it:"
-    MessageError "Install-Module -Name sqlserver -Force"
-    exit 1
+    MessageError "Install-Module sqlserver -AllowClobber -Force"
+    exit_script 1 $quiet
   }
+
+  ValidateArgs
 
   $server = ConnectToSqlServer
   RecreateDb -server_instance $server
@@ -159,9 +174,14 @@ function Main {
   }
 
   CreateDbCredentials
+
+  if (-not $skip_odbc_creation) {
+    MessageInfo "Creating odbc configurations..."
+    .\odbcad.ps1 -server_name $server_name -quiet
+  }
+
+  MessageSuccess "Successfully imported [$db_name] database into [$server_name] SQL server!"
 }
 
 Main
-if (-not $quiet) {
-  cmd /c 'pause'
-}
+exit_script 0 $quiet

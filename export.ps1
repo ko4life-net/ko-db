@@ -6,8 +6,6 @@
 param (
     # change server_name if you installed your sql server as a Named Instance.
     # If you installed on the Default Instance, then you can leave this as-is.
-    # If you're still not sure what is your sql server names, you can run the following powershell command:
-    # (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
     [string][Parameter(Mandatory = $false)]
     $server_name = "localhost",
 
@@ -22,7 +20,13 @@ param (
     $quiet
 )
 
-. "$PSScriptRoot\logger.ps1"
+. "$PSScriptRoot\utils.ps1"
+
+function ValidateArgs {
+  if (-not (ValidateServerNameInput $server_name)) {
+    exit_script 1 $quiet
+  }
+}
 
 
 function GetFileEncoding($Path) {
@@ -46,8 +50,10 @@ function Main {
     MessageError "Error: 'mssql-scripter' command is not available."
     MessageError "Please make sure you have Python installed and then run:"
     MessageError "pip install mssql-scripter"
-    exit 1
+    exit_script 1 $quiet
   }
+
+  ValidateArgs
 
   mssql-scripter `
     -S $server_name `
@@ -106,10 +112,8 @@ function Main {
       "$PSScriptRoot\src\procedure\"
   }
 
-  MessageSuccess "Successfully exported [$db_name] database from [$server_name] SQL server."
+  MessageSuccess "Successfully exported [$db_name] database from [$server_name] SQL server!"
 }
 
 Main
-if (-not $quiet) {
-  cmd /c 'pause'
-}
+exit_script 0 $quiet
