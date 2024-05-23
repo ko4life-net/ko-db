@@ -33,7 +33,6 @@ function ValidateServerNameInput {
       MessageError "Available sql named instances: [$($sql_instances -join ', ')]"
       $invoker_script_name = ($MyInvocation.PSCommandPath -split "\\")[-1]
       MessageError "Example: .\$invoker_script_name -server_name "".\$($sql_instances[-1])"""
-      exit 1
     }
     return $false
   }
