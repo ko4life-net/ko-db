@@ -58,4 +58,9 @@ Assuming you set a custom name to your SQL Server instance, you may invoke the i
 .\import.ps1 -server_name ".\MyCustomInstanceName"
 ```
 
+If you encounter the error `script cannot be loaded because running scripts is disabled on this system` follow these steps:
+	- Open PowerShell as Administrator and type: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+	- Run the `Import.ps1` script again.
+	- After the import script completes, you can restrict script execution again by typing: `Set-ExecutionPolicy Restricted -Scope CurrentUser`
+
 Once the import script finished importing the db, it will also invoke the `odbcad.ps1` script for you to automatically set odbc configurations so that the server files can connect with your db.
