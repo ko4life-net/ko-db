@@ -149,12 +149,13 @@ function CreateDbCredentials {
 }
 
 function Main {
-  # Check if the sqlserver module is installed
-  if (-not (Get-Module -Name sqlserver -ListAvailable)) {
-    MessageError "Error: The 'sqlserver' powershell module is not installed."
-    MessageError "Please open PowerShell as Administrator and execute the following command to install it:"
-    MessageError "Install-Module sqlserver -AllowClobber -Force"
-    exit_script 1 $quiet
+  if (-not (Get-Module sqlserver -ListAvailable)) {
+    MessageInfo "Installing missing 'sqlserver' powershell module..."
+    # ensure we first install the NuGet package provider so that Install-Module won't prompt us
+    if (-not (Get-PackageProvider -ListAvailable | Where-Object { $_.Name -eq 'NuGet' })) {
+      Install-PackageProvider NuGet -Force -Scope CurrentUser
+    }
+    Install-Module sqlserver -AllowClobber -Force -Scope CurrentUser
   }
 
   ValidateArgs
