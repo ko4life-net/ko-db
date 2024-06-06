@@ -1,6 +1,6 @@
 # Knight Online Database
 
-This repository contains scripts to build the database from scratch.
+This repository contains scripts to build the database from scratch and set all the configurations needed for you to be able running the game.
 
 Brief explanation of the directory structure under `src`:
 - data - Insert queries based on the current db state
@@ -9,19 +9,32 @@ Brief explanation of the directory structure under `src`:
 - procedure - Stored procedures based on the current db state
 - schema - Tables structure and constraints based on the current db state
 
+
 ### Prerequisite
 
-- Any MSSQL Express Server (confirmed to be working with 2008 and 2022)
-  - Download the Express version from here: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
-  - Download the latest MSSQL Management Studio: https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
-    - Note that it can connect to any version of SQL Server, so even if you use 2008, just get the latest Management Studio for better development experience
-- Powershell `sqlserver` module
-  - Open Powershell as Admin and run the following command: `Install-Module sqlserver -AllowClobber -Force`
-    - Note that if you're getting errors during the installation, it is likely because because your SQL installation installed its own powershell module which conflicts with the one we intend to use. They're incompatible and behave differently when creating db exports, hence you may want to delete it from your System Environment Variable `PSModulePath` and restart powershell to reload without these modules. Basically if you see in your `PSModulePath` environment variable something with `Microsoft SQL Server`, just remove it, since we want to use the module that we intend to use.
-- Python and installing via pip the following packages (if you get errors, run powershell as admin):
-  - T-SQL code formatter: `pip install sqlfluff`
-  - MSSQL scripter: `pip install mssql-scripter`
-  - Note that if you're using [virtualenv](https://docs.python.org/3/library/venv.html) (recommended), you can simply install the requirements.txt.
+- Being able to run powershell scripts. Note that if you're unable to run the scripts, it is because you need to allow powershell scripts to run on your system by setting the execution policy to bypass with the following powershell command: `Set-ExecutionPolicy Bypass -Scope CurrentUser`
+- Microsoft SQL Server Express or Developer (confirmed to be working with versions 2022 and 2008)
+  - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+  - [SQL Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+- [Git](https://git-scm.com/download/win) (version 2.45.1 at the time of writing)
+- [Python](https://www.python.org/downloads/) (version 3.12.3 at the time of writing)
+  - During installation in the `Advanced Options` make sure to tick `Add Python to environment variables`
+  - Once finished, install the required packages with the following command: `pip install -r requirements.txt`
+
+
+### Getting Started
+
+Before running the `import.ps1` script, check that the `$server_name` variable matches with your current server name. If you installed SQL Server using the default instance, then the default arguments should be working fine, otherwise you can provide the script an argument with your custom server name. You can run the following command in powershell to know the names of your current SQL Servers:
+```powershell
+(Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
+```
+
+Assuming you set a custom name to your SQL Server instance, you may invoke the import command as follows:
+```powershell
+.\import.ps1 -server_name ".\MyCustomInstanceName"
+```
+
+Once the import script finished importing the db, it will also invoke the `odbcad.ps1` script automatically for you to set odbc configurations so that the server files can connect with your db.
 
 
 ### Development
@@ -45,17 +58,3 @@ Release process should follow for every release we create in the [main ko projec
 
 In other words, we use the `master` branch as the development and release branch, but when tagging, they are all fixed to a specific tag.
 Maybe in the future this will change if it makes things difficult and we maintain a separate development branch.
-
-### How to use
-
-Before running the `import.ps1` script, check that the `$server_name` variable matches with your current server name. If you installed SQL Server using the default instance, then the defaults arguments should work, otherwise you can provide to the script an argument with your custom server name. You can run the following command in powershell to know the names of your current SQL Servers:
-```powershell
-(Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
-```
-
-Assuming you set a custom name to your SQL Server instance, you may invoke the import command as follows:
-```powershell
-.\import.ps1 -server_name ".\MyCustomInstanceName"
-```
-
-Once the import script finished importing the db, it will also invoke the `odbcad.ps1` script for you to automatically set odbc configurations so that the server files can connect with your db.
