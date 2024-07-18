@@ -9,6 +9,10 @@ CREATE TABLE [dbo].[MAGIC_TYPE8](
 	[Target] [tinyint] NOT NULL,
 	[Radius] [smallint] NOT NULL,
 	[WarpType] [tinyint] NOT NULL,
-	[ExpRecover] [smallint] NOT NULL
+	[ExpRecover] [smallint] NOT NULL,
+ CONSTRAINT [PK_MAGIC_TYPE8] PRIMARY KEY CLUSTERED 
+(
+	[iNum] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO

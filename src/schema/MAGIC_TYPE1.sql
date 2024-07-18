@@ -9,6 +9,7 @@ CREATE TABLE [dbo].[MAGIC_TYPE1](
 	[Type] [tinyint] NOT NULL,
 	[HitRate] [smallint] NOT NULL,
 	[Hit] [smallint] NOT NULL,
+	[AddDamage] [smallint] NOT NULL,
 	[Delay] [tinyint] NOT NULL,
 	[ComboType] [tinyint] NOT NULL,
 	[ComboCount] [tinyint] NOT NULL,
