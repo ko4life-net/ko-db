@@ -8,6 +8,10 @@ CREATE TABLE [dbo].[MAGIC_TYPE5](
 	[Description] [char](100) NULL,
 	[Type] [tinyint] NOT NULL,
 	[ExpRecover] [tinyint] NOT NULL,
-	[NeedStone] [smallint] NOT NULL
+	[NeedStone] [smallint] NOT NULL,
+ CONSTRAINT [PK_MAGIC_TYPE5] PRIMARY KEY CLUSTERED 
+(
+	[iNum] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
