@@ -5,7 +5,6 @@ param (
 )
 
 $dirs_to_format = @(
-  "$PSScriptRoot\src\migration\",
   "$PSScriptRoot\src\misc\",
   "$PSScriptRoot\src\procedure\"
 )
