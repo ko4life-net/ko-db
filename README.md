@@ -13,7 +13,7 @@ Brief explanation of the directory structure under `src`:
 ### Prerequisite
 
 - Being able to run powershell scripts. Note that if you're unable to run the scripts, it is because you need to allow powershell scripts to run on your system by setting the execution policy to bypass with the following powershell command: `Set-ExecutionPolicy Bypass -Scope CurrentUser`
-- Microsoft SQL Server Express or Developer (confirmed to be working with versions 2022 and 2008)
+- Microsoft SQL Server Express or Developer (confirmed to be working with versions 2022, minimum required 2019)
   - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
   - [SQL Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 - [Git](https://git-scm.com/download/win) (version 2.45.1 at the time of writing)
@@ -45,7 +45,7 @@ During development we only create migration scripts to alter the current state o
 
 Every migration script will be prefixed with max 4 leading zeros. For example, `0001_insert_steve_user.sql` will contain an insert statement into `TB_USER` table.
 
-Apart from the benifit of having the database under version control, this also makes it easy to use any SQL version you want. I use both 2008 and 2022 and it works perfectly fine with both.
+Apart from the benifit of having the database under version control, this also makes it easy to use any SQL version you want.
 
 Release process should follow for every release we create in the [main ko project](https://github.com/ko4life-net/ko). The steps should look like this:
 - Main ko project needs a new release
