@@ -1,0 +1,25 @@
+diff --git a/src/data/VERSION.sql b/src/data/VERSION.sql
+index 2e88f9f..afef6fc 100644
+--- a/src/data/VERSION.sql
++++ b/src/data/VERSION.sql
+@@ -1 +1 @@
+-﻿INSERT [dbo].[VERSION] ([sVersion], [strFileName], [strCompressName], [sHistoryVersion]) VALUES (1089, N'eeee', N'eeee', 1089)
++﻿INSERT [dbo].[VERSION] ([sVersion], [strFile], [strPatchFileName], [sHistoryVersion]) VALUES (1264, N'KnightOnLine.exe', N'patch1264.zip', 0)
+diff --git a/src/schema/VERSION.sql b/src/schema/VERSION.sql
+index 1f44939..6dac075 100644
+--- a/src/schema/VERSION.sql
++++ b/src/schema/VERSION.sql
+@@ -3,9 +3,9 @@ GO
+ SET QUOTED_IDENTIFIER ON
+ GO
+ CREATE TABLE [dbo].[VERSION](
+-	[sVersion] [int] NOT NULL,
+-	[strFileName] [varchar](40) NULL,
+-	[strCompressName] [varchar](10) NULL,
+-	[sHistoryVersion] [int] NULL
++	[sVersion] [smallint] NOT NULL,
++	[strFile] [varchar](500) NULL,
++	[strPatchFileName] [varchar](13) NULL,
++	[sHistoryVersion] [smallint] NULL
+ ) ON [PRIMARY]
+ GO
