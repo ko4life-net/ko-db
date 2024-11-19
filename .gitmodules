@@ -1,0 +1,5 @@
+[submodule "src/migration/archive"]
+	path = src/migration/archive
+	url = ../ko-db-archive
+	shallow = true
+	depth = 1
