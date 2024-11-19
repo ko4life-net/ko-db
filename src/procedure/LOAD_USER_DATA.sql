@@ -5,7 +5,7 @@ GO
 
 
 CREATE PROCEDURE [dbo].[LOAD_USER_DATA]
-  @id char(21),
+  @id varchar(21),
   @nRet smallint OUTPUT
 AS
 

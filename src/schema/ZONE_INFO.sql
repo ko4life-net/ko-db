@@ -5,7 +5,7 @@ GO
 CREATE TABLE [dbo].[ZONE_INFO](
 	[ServerNo] [tinyint] NOT NULL,
 	[ZoneNo] [smallint] NOT NULL,
-	[strZoneName] [char](30) NOT NULL,
+	[strZoneName] [varchar](30) NOT NULL,
 	[InitX] [int] NOT NULL,
 	[InitZ] [int] NOT NULL,
 	[InitY] [int] NOT NULL,

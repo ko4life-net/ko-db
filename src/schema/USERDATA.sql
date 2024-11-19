@@ -3,7 +3,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[USERDATA](
-	[strUserId] [char](21) NOT NULL,
+	[strUserId] [varchar](21) NOT NULL,
 	[Nation] [tinyint] NOT NULL,
 	[Race] [tinyint] NOT NULL,
 	[Class] [smallint] NOT NULL,

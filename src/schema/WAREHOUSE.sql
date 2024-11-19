@@ -3,7 +3,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[WAREHOUSE](
-	[strAccountID] [char](21) NOT NULL,
+	[strAccountID] [varchar](21) NOT NULL,
 	[nMoney] [int] NOT NULL,
 	[dwTime] [int] NOT NULL,
 	[byItem] [binary](1600) NULL,

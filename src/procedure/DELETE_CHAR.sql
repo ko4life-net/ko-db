@@ -3,21 +3,21 @@ GO
 SET QUOTED_IDENTIFIER OFF
 GO
 CREATE PROCEDURE [dbo].[DELETE_CHAR]
-  @AccountID char(21),
+  @AccountID varchar(21),
   @index tinyint,
-  @CharID char(21),
-  @SocNo char(15),
+  @CharID varchar(21),
+  @SocNo varchar(15),
   @nRet smallint OUTPUT
 AS
 
 DECLARE
   @bCharNum tinyint,
-  @charid1 char(21),
-  @charid2 char(21),
-  @charid3 char(21),
-  @charid4 char(21),
-  @charid5 char(21),
-  @strSocNo char(15)
+  @charid1 varchar(21),
+  @charid2 varchar(21),
+  @charid3 varchar(21),
+  @charid4 varchar(21),
+  @charid5 varchar(21),
+  @strSocNo varchar(15)
 DECLARE @KnightsIndex smallint
 SET @bCharNum = 0
 SET @KnightsIndex = 0

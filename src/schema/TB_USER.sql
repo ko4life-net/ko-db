@@ -5,6 +5,6 @@ GO
 CREATE TABLE [dbo].[TB_USER](
 	[strAccountID] [varchar](21) NOT NULL,
 	[strPasswd] [varchar](13) NOT NULL,
-	[strSocNo] [char](15) NOT NULL
+	[strSocNo] [varchar](15) NOT NULL
 ) ON [PRIMARY]
 GO

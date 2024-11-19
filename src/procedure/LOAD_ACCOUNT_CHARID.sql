@@ -3,7 +3,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE PROCEDURE [dbo].[LOAD_ACCOUNT_CHARID]
-  @Accountid char(21)
+  @Accountid varchar(21)
 AS
 
 SELECT

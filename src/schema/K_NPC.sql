@@ -7,7 +7,6 @@ CREATE TABLE [dbo].[K_NPC](
 	[strName] [varchar](30) NULL,
 	[sPid] [smallint] NOT NULL,
 	[sSize] [smallint] NOT NULL,
-	[Obs] [text] NULL,
 	[iWeapon1] [int] NOT NULL,
 	[iWeapon2] [int] NOT NULL,
 	[byGroup] [int] NOT NULL,
@@ -49,7 +48,7 @@ CREATE TABLE [dbo].[K_NPC](
 	[sItem] [int] NOT NULL,
 	[byDirectAttack] [int] NOT NULL,
 	[byMagicAttack] [int] NOT NULL
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[K_NPC] ADD  CONSTRAINT [DF_KNIGHT_NPC_byWeapon]  DEFAULT ((0)) FOR [iWeapon2]
 GO

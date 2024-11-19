@@ -8,11 +8,11 @@ CREATE PROCEDURE [dbo].[CREATE_KNIGHTS]
   @index smallint,
   @nation tinyint,
   @community tinyint,
-  @strName char(21),
-  @strChief char(21)
+  @strName varchar(21),
+  @strChief varchar(21)
 AS
 
-DECLARE @Row tinyint, @KnightsIndex smallint, @KnightsName char(21)
+DECLARE @Row tinyint, @KnightsIndex smallint, @KnightsName varchar(21)
 SET @Row = 0 SET @KnightsIndex = 0 SET @KnightsName = ''
 
 SELECT @Row = COUNT(*) FROM KNIGHTS WHERE IDNum = @index OR IDName = @strName

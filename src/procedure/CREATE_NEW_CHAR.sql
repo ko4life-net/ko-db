@@ -5,9 +5,9 @@ GO
 CREATE PROCEDURE [dbo].[CREATE_NEW_CHAR]
 
   @nRet smallint OUTPUT,
-  @AccountID char(21),
+  @AccountID varchar(21),
   @index tinyint,
-  @CharID char(21),
+  @CharID varchar(21),
   @Race tinyint,
   @Class smallint,
   @Hair tinyint,

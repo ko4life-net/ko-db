@@ -3,10 +3,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CURRENTUSER](
-	[strAccountID] [char](15) NULL,
-	[strCharID] [char](21) NULL,
+	[strAccountID] [varchar](15) NULL,
+	[strCharID] [varchar](21) NULL,
 	[nServerNo] [int] NULL,
-	[strServerIP] [char](25) NULL,
-	[strClientIP] [char](25) NULL
+	[strServerIP] [varchar](25) NULL,
+	[strClientIP] [varchar](25) NULL
 ) ON [PRIMARY]
 GO

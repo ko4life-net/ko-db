@@ -3,14 +3,14 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ACCOUNT_CHAR](
-	[strAccountID] [char](21) NOT NULL,
+	[strAccountID] [varchar](21) NOT NULL,
 	[bNation] [tinyint] NOT NULL,
 	[bCharNum] [tinyint] NOT NULL,
-	[strCharID1] [char](21) NULL,
-	[strCharID2] [char](21) NULL,
-	[strCharID3] [char](21) NULL,
-	[strCharID4] [char](21) NULL,
-	[strCharID5] [char](21) NULL,
+	[strCharID1] [varchar](21) NULL,
+	[strCharID2] [varchar](21) NULL,
+	[strCharID3] [varchar](21) NULL,
+	[strCharID4] [varchar](21) NULL,
+	[strCharID5] [varchar](21) NULL,
  CONSTRAINT [PK_ACCOUNT_CHAR] PRIMARY KEY CLUSTERED 
 (
 	[strAccountID] ASC

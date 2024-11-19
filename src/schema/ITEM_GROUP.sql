@@ -4,7 +4,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ITEM_GROUP](
 	[group] [smallint] NOT NULL,
-	[name] [char](30) NULL,
+	[name] [varchar](30) NULL,
 	[item1] [int] NOT NULL,
 	[item2] [int] NOT NULL,
 	[item3] [int] NOT NULL,

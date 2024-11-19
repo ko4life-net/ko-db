@@ -4,7 +4,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[MAKE_ITEM](
 	[sIndex] [smallint] NOT NULL,
-	[strItemInfo] [char](20) NULL,
+	[strItemInfo] [varchar](20) NULL,
 	[iItemCode] [int] NOT NULL,
 	[byItemLevel] [tinyint] NOT NULL
 ) ON [PRIMARY]
