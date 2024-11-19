@@ -4,8 +4,8 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[MAGIC_TYPE4](
 	[iNum] [int] NOT NULL,
-	[Name] [char](30) NOT NULL,
-	[Description] [char](100) NULL,
+	[Name] [varchar](30) NOT NULL,
+	[Description] [varchar](100) NULL,
 	[BuffType] [tinyint] NOT NULL,
 	[Radius] [tinyint] NOT NULL,
 	[Duration] [smallint] NOT NULL,

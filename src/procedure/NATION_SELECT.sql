@@ -5,7 +5,7 @@ GO
 
 CREATE PROCEDURE [dbo].[NATION_SELECT]
   @nRet smallint OUTPUT,
-  @AccountID char(21),
+  @AccountID varchar(21),
   @Nation tinyint
 AS
 

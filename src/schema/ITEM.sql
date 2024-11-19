@@ -4,7 +4,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ITEM](
 	[Num] [int] NOT NULL,
-	[strName] [char](50) NOT NULL,
+	[strName] [varchar](50) NOT NULL,
 	[Kind] [tinyint] NOT NULL,
 	[Slot] [tinyint] NOT NULL,
 	[Race] [tinyint] NOT NULL,

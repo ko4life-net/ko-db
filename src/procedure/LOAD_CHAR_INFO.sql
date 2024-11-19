@@ -6,7 +6,7 @@ GO
 -- 2002.01.18
 
 CREATE PROCEDURE [dbo].[LOAD_CHAR_INFO]
-  @CharId char(21),
+  @CharId varchar(21),
   @nRet smallint OUTPUT
 AS
 

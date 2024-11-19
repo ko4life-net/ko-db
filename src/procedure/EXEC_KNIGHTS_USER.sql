@@ -9,7 +9,7 @@ CREATE PROCEDURE [dbo].[EXEC_KNIGHTS_USER]
 AS
 
 SET NOCOUNT ON
-DECLARE @strUserId char(21)
+DECLARE @strUserId varchar(21)
 DECLARE @KnightsIndex smallint
 DECLARE job1 CURSOR FOR
 

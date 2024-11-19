@@ -4,9 +4,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[MAGIC](
 	[MagicNum] [int] NOT NULL,
-	[EnName] [char](30) NULL,
-	[KrName] [char](30) NULL,
-	[Description] [char](100) NULL,
+	[EnName] [varchar](30) NULL,
+	[KrName] [varchar](30) NULL,
+	[Description] [varchar](100) NULL,
 	[BeforeAction] [tinyint] NOT NULL,
 	[TargetAction] [tinyint] NOT NULL,
 	[SelfEffect] [tinyint] NOT NULL,
@@ -33,10 +33,6 @@ CREATE TABLE [dbo].[MAGIC](
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[MAGIC] ADD  CONSTRAINT [DF_MAGIC_Num]  DEFAULT ((1)) FOR [MagicNum]
-GO
-ALTER TABLE [dbo].[MAGIC] ADD  CONSTRAINT [DF_MAGIC_Moral]  DEFAULT ((0)) FOR [KrName]
-GO
-ALTER TABLE [dbo].[MAGIC] ADD  CONSTRAINT [DF_MAGIC_Class]  DEFAULT ((0)) FOR [Description]
 GO
 ALTER TABLE [dbo].[MAGIC] ADD  CONSTRAINT [DF_MAGIC_Level]  DEFAULT ((0)) FOR [BeforeAction]
 GO
