@@ -1,60 +1,67 @@
 # Knight Online Database
 
-This repository contains scripts to build the database from scratch and set all the configurations needed for you to be able running the game.
+This repository contains scripts to build the database from scratch and configure everything needed to run the game.
 
-Brief explanation of the directory structure under `src`:
-- data - Insert queries based on the current db state
-- migration - [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) scripts to update the existing db state
-- misc - Utility and useful scripts
-- procedure - Stored procedures based on the current db state
-- schema - Tables structure and constraints based on the current db state
+### Directory Structure under `src`:
+
+- **data**: Insert queries based on the current database state.
+- **migration**: [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) scripts to update the existing database state.
+  - **archive**: [ko-db-archive](https://github.com/ko4life-net/ko-db-archive) archived migration scripts that has been released.
+- **misc**: Utility and helper scripts.
+- **procedure**: Stored procedures based on the current database state.
+- **schema**: Table structures and constraints based on the current database state.
 
 
-### Prerequisite
+### Prerequisites
 
-- Being able to run powershell scripts. Note that if you're unable to run the scripts, it is because you need to allow powershell scripts to run on your system by setting the execution policy to bypass with the following powershell command: `Set-ExecutionPolicy Bypass -Scope CurrentUser`
-- Microsoft SQL Server Express or Developer (confirmed to be working with versions 2022 and 2008)
-  - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-  - [SQL Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
-- [Git](https://git-scm.com/download/win) (version 2.45.1 at the time of writing)
-- [Python](https://www.python.org/downloads/) (version 3.12.3 at the time of writing)
-  - During installation in the `Advanced Options` make sure to tick `Add Python to environment variables`
-  - Once finished, install the required packages with the following command: `pip install -r requirements.txt`
+- **PowerShell**: Enable script execution by running: `Set-ExecutionPolicy Bypass -Scope CurrentUser`
+- **Git**: Install [Git](https://git-scm.com/download/win) (e.g., version 2.45.1).
+- **Microsoft SQL Server**:
+  - Install SQL Server Express/Developer Edition (minimum: MSSQL 2019 for UTF-8 collation).
+    - [Download SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+  - Install [SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- **Python**:
+  - Install [Python](https://www.python.org/downloads/) (e.g., version 3.12.3).
+    - During setup, check **"Add Python to environment variables"** in `Advanced Options`.
+  - Install required packages: `pip install -r requirements.txt`
 
 
 ### Getting Started
 
-Before running the `import.ps1` script, check that the `$server_name` variable matches with your current server name. If you installed SQL Server using the default instance, then the default arguments should be working fine, otherwise you can provide the script an argument with your custom server name. You can run the following command in powershell to know the names of your current SQL Servers:
-```powershell
-(Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server').InstalledInstances
-```
+After completing the prerequisites, you can import the database into your SQL Server by running the import script: `.\import.ps1`
 
-Assuming you set a custom name to your SQL Server instance, you may invoke the import command as follows:
-```powershell
-.\import.ps1 -server_name ".\MyCustomInstanceName"
-```
+The script will automatically execute `odbcad.ps1` to configure ODBC settings, ensuring the server files can connect to your database. Once done, your database will be ready for use, and no additional configuration is needed.
 
-Once the import script finished importing the db, it will also invoke the `odbcad.ps1` script automatically for you to set odbc configurations so that the server files can connect with your db.
-
+Note: The main KO project clones this repository as a shallow submodule (without history). To browse the full history or inspect the migration scripts (a submodule of this project), unshallow the repository by running the following command in the root directory: `git fetch --unshallow`
 
 ### Development
 
-Note that the development process is inspired from [different db development environments](https://docs.djangoproject.com/en/4.0/topics/migrations/), where a table is treated as a model.
+The development process is inspired by [various database development environments](https://docs.djangoproject.com/en/4.0/topics/migrations/), where tables are treated as models.
 
-During development we only create migration scripts to alter the current state of the base. The base here refers to the generated scripts in data, procedure and schema.
+During development, create migration scripts to alter the current state of the database. The "base" refers to the generated scripts in the `data`, `procedure`, and `schema` directories.
 
-Every migration script will be prefixed with max 4 leading zeros. For example, `0001_insert_steve_user.sql` will contain an insert statement into `TB_USER` table.
+Migration scripts should be prefixed with a maximum of four leading zeros. For example:
+- `0001_insert_steve_user.sql`: Contains an `INSERT` statement for the `TB_USER` table.
 
-Apart from the benifit of having the database under version control, this also makes it easy to use any SQL version you want. I use both 2008 and 2022 and it works perfectly fine with both.
+Benefits of this approach:
+- The database is version-controlled.
+- You can easily use almost any SQL version you prefer.
 
-Release process should follow for every release we create in the [main ko project](https://github.com/ko4life-net/ko). The steps should look like this:
-- Main ko project needs a new release
-  - Are there any pending migration scrips in the ko-db project?
-    - If yes, create a new ko-db release, which the steps are documented in the [migration dir README.md](/src/migration/README.md)
-    - If no, no need to update the ko-db project
-- Main ko project sets the tag in the config script to the latest released ko-db version
-- Main ko project creates a new release and after merging, changing the config script back to the ko-db master branch
-  - This is because the migration scripts in the ko-db project has been archived at this point, meaning newly added migration scripts will automatically affect the main ko project
 
-In other words, we use the `master` branch as the development and release branch, but when tagging, they are all fixed to a specific tag.
-Maybe in the future this will change if it makes things difficult and we maintain a separate development branch.
+### Release Process
+
+The release process for the [main KO project](https://github.com/ko4life-net/ko) should align with changes in the KO-DB project. Follow these steps:
+
+1. **Identify the Need for a KO-DB Release**:
+   - If the main KO project introduces changes that depend on KO-DB updates, ensure those updates are implemented in KO-DB first.
+   - Follow the steps in the [migration directory README.md](/src/migration/README.md) to prepare the changes.
+
+2. **Create a KO-DB Release**:
+   - Once the database changes are ready, create a new KO-DB release with a version tag.
+
+3. **Update the Submodule**:
+   - In the main KO project, update the KO-DB submodule to reference the new release tag.
+
+**Best Practice**:
+- If the KO-DB project has changes (e.g., cleaning inconsistencies or extending tables) that do not immediately impact the main KO project, you don’t need to draft a KO-DB release right away.
+- However, if the main KO project is preparing a release and KO-DB has untagged updates, draft a new KO-DB release first. This ensures the main KO project can reference the latest KO-DB release tag.

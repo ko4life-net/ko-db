@@ -87,7 +87,12 @@ function RecreateDb {
   }
 
   MessageInfo "Creating database $db_name..."
-  InvokeSqlQuery -query "USE master; CREATE DATABASE [$db_name] COLLATE SQL_Latin1_General_CP1_CS_AS;"
+  # `Latin1_General_100_CS_AS_SC_UTF8` collation with UTF-8 support requires MSSQL 2019 or later.
+  # Details: https://learn.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver16#utf8
+  #
+  # Archived migration scripts may fail from script 0021 due to the migration of `text` to `varchar`.
+  # If you want to test scripts with the initial setup, use `SQL_Latin1_General_CP1_CI_AS` collation instead.
+  InvokeSqlQuery -query "USE master; CREATE DATABASE [$db_name] COLLATE Latin1_General_100_CS_AS_SC_UTF8;"
 }
 
 function RunInitialDbScripts {
