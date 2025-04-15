@@ -1,0 +1,4 @@
+INSERT INTO [dbo].[NEWS] ([NoticeType], [Title], [Content], [StartsAt], [ExpiresAt], [IsActive]) VALUES
+(N'login', N'Early Stage of the Project', N'We are looking for people who would like to help. If you are interested, feel free to commit your first PR.', '2025-04-14 19:55:36.367', NULL, 1),
+(N'login', N'Thanks to All Participants', N'Huge thanks to everyone contributing to the project, testing features, or reporting bugs!', '2025-04-14 19:55:36.367', NULL, 1),
+(N'login', N'Join Our Discord Community!', N'Have a question or want to help out? Join our Discord to get involved: https://discord.gg/g2Dz6MqnW3', '2025-04-14 19:55:36.367', NULL, 1);
